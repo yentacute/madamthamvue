@@ -1,0 +1,6 @@
+
+@mixin heading-size($size, $lineHeight, $marginBottom) {
+  font-size: $size;
+  line-height: $lineHeight;
+  margin-bottom: $marginBottom;
+}

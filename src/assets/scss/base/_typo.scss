@@ -1,0 +1,60 @@
+$h1-font-size: rem(60);
+$h2-font-size: rem(42);
+$h3-font-size: rem(32);
+$h4-font-size: rem(22);
+$h5-font-size: rem(18);
+$h6-font-size: 1rem;
+$h1-mobile-font-size: rem(36);
+$h2-mobile-font-size: rem(28);
+$h3-mobile-font-size: rem(24);
+$h4-mobile-font-size: rem(18);
+$h5-mobile-font-size: rem(16);
+$h6-mobile-font-size: rem(14);
+
+
+h1 {
+  @include heading-size($h1-font-size, 1, rem(24));
+  @include breakpoint-max(md) {
+    @include heading-size($h1-mobile-font-size, 1, rem(16));
+  };
+}
+
+h2 {
+  @include heading-size($h2-font-size, 1.067, rem(18));
+  @include breakpoint-max(md) {
+    @include heading-size($h2-mobile-font-size, 1, rem(16));
+  };
+}
+
+h3 {
+  @include heading-size($h3-font-size, 1.083, rem(16));
+  @include breakpoint-max(md) {
+    @include heading-size($h3-mobile-font-size, 1, rem(16));
+  };
+}
+
+h4 {
+  @include heading-size($h4-font-size, 1.1, rem(16));
+  @include breakpoint-max(md) {
+    @include heading-size($h4-mobile-font-size, 1, rem(16));
+  };
+}
+
+h5 {
+  @include heading-size($h5-font-size, 1.111, rem(14));
+  @include breakpoint-max(md) {
+    @include heading-size($h5-mobile-font-size, 1, rem(16));
+  };
+}
+
+h6 {
+  @include heading-size($h6-font-size, 1.125, rem(2));
+  @include breakpoint-max(md) {
+    @include heading-size($h6-mobile-font-size, 1, rem(16));
+  };
+}
+
+button,
+.btn {
+  
+}
