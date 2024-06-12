@@ -1,0 +1,202 @@
+
+/* Mixin for text styles */
+@mixin text-styles($name, $property, $value) {
+  &-#{$name} {
+    #{$property}: $value;
+  }
+}
+
+/* Mixin for align items */
+@mixin align-styles($name, $value) {
+  &-#{$name} {
+    align-items: $value;
+  }
+}
+
+/* Mixin for justify content */
+@mixin justify-styles($name, $value) {
+  &-#{$name} {
+    justify-content: $value;
+  }
+}
+
+
+.text { 
+  @include text-styles(left, text-align, left);
+  @include text-styles(center, text-align, center);
+  @include text-styles(right, text-align, right);
+  @include text-styles(justify, text-align, justify);
+  @include text-styles(nowrap, white-space, nowrap);
+  @include text-styles(truncate, text-overflow, ellipsis);
+  @include text-styles(underline, text-decoration, underline);
+  @include text-styles(line-through, text-decoration, line-through);
+  @include text-styles(no-underline, text-decoration, none);
+  @include text-styles(capitalize, text-transform, capitalize);
+  @include text-styles(uppercase, text-transform, uppercase);
+  @include text-styles(lowercase, text-transform, lowercase);
+}
+
+/* Align items */
+.align {
+  @include align-styles(left, flex-start);
+  @include align-styles(center, center);
+  @include align-styles(right, flex-end);
+}
+
+/* Justify content */
+.justify {
+  @include justify-styles(start, flex-start);
+  @include justify-styles(end, flex-end);
+  @include justify-styles(center, center);
+  @include justify-styles(between, space-between);
+  @include justify-styles(evently, space-evently);
+}
+
+@for $i from 0 to 200 {
+  .mg {
+    margin: #{$i}px;
+  }
+  .mt-#{$i} {
+    margin-top: #{$i}px;
+  }
+  .mb-#{$i} {
+    margin-bottom: #{$i}px;
+  }
+  .ml-#{$i} {
+    margin-left: #{$i}px;
+  }
+  .mr-#{$i} {
+    margin-right: #{$i}px;
+  }
+  .pt-#{$i} {
+    padding-top: #{$i}px;
+  }
+  .pb-#{$i} {
+    padding-bottom: #{$i}px;
+  }
+  .pl-#{$i} {
+    padding-left: #{$i}px;
+  }
+  .pr-#{$i} {
+    padding-right: #{$i}px;
+  }
+  .pd {
+    padding: #{$i}px;
+  }
+}
+
+
+
+/* flex */
+
+.t {
+  &-flex {
+    display: flex;
+  }
+
+  &-inline-flex {
+    display: inline-flex;
+  }
+
+  &-inline-block {
+    display: inline-block;
+  }
+
+  &-flex-row {
+    flex-direction: row;
+  }
+
+  &-flex-row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  &-flex-column {
+    flex-direction: column;
+  }
+
+  &-flex-column-reverse {
+    flex-direction: column-reverse;
+  }
+
+  &-flex-wrap {
+    flex-wrap: wrap;
+  }
+
+  &-flex-nowrap {
+    flex-wrap: nowrap;
+  }
+
+  &-flex-wrap-reverse {
+    flex-wrap: wrap-reverse;
+  }
+
+  &-grid {
+    display: grid;
+  }
+}
+/* variable $breakpoints-max get from breakpoints file */
+@each $prop, $value in $breakpoints-max {
+  @include breakpoint-max($prop) {
+    .#{$prop}\: {
+      &text {
+        @include text-styles(left, text-align, left);
+        @include text-styles(center, text-align, center);
+        @include text-styles(right, text-align, right);
+        @include text-styles(justify, text-align, justify);
+        @include text-styles(nowrap, white-space, nowrap);
+        @include text-styles(truncate, text-overflow, ellipsis);
+        @include text-styles(underline, text-decoration, underline);
+        @include text-styles(line-through, text-decoration, line-through);
+        @include text-styles(no-underline, text-decoration, none);
+        @include text-styles(capitalize, text-transform, capitalize);
+        @include text-styles(uppercase, text-transform, uppercase);
+        @include text-styles(lowercase, text-transform, lowercase);
+      }
+
+      /* Align items */
+      &align {
+        @include align-styles(left, flex-start);
+        @include align-styles(center, center);
+        @include align-styles(right, flex-end);
+      }
+
+      /* Justify content */
+      &justify {
+        @include justify-styles(start, flex-start);
+        @include justify-styles(end, flex-end);
+        @include justify-styles(center, center);
+        @include justify-styles(between, space-between);
+        @include justify-styles(evently, space-evently);
+      }
+    }
+  }
+}
+
+
+/* width  */
+
+@include set-value(w, width, 100, "%");
+
+ /* height */
+
+@include set-value(h, height, 100, "%");
+
+/* animation */
+
+@include set-value(animation-delay, animation-delay, 30, "s");
+@include set-value(animation-duration, animation-duration, 30, "s");
+@include set-value(col-gap, column-gap, 200, "px");
+@include set-value(row-gap, row-gap, 200, "px");
+@include set-value(gap, gap, 200, "px");
+
+/* section padding */
+
+.section {
+  padding-top: var(--t-section-padding-top, 60px);
+  padding-bottom: var(--t-section-padding-bottom, 60px);
+
+  @include breakpoint-max(md) {
+    padding-top: var(--t-section-padding-top-md, 32px);
+    padding-bottom: var(--t-section-padding-bottom-md, 32px);
+  }
+}

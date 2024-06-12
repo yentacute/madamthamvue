@@ -12,49 +12,133 @@ $h5-mobile-font-size: rem(16);
 $h6-mobile-font-size: rem(14);
 
 
+/* font-face */
+
+@font-face {
+  font-family: 'T-Font-Regular';
+  src: url('../../fonts/Jost/Jost-VariableFont_wght.ttf') format('ttf'),
+       url('../../fonts/Jost/Jost-VariableFont_wght.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* heading tag */
 h1 {
   @include heading-size($h1-font-size, 1, rem(24));
   @include breakpoint-max(md) {
     @include heading-size($h1-mobile-font-size, 1, rem(16));
-  };
+  }
 }
 
 h2 {
   @include heading-size($h2-font-size, 1.067, rem(18));
   @include breakpoint-max(md) {
     @include heading-size($h2-mobile-font-size, 1, rem(16));
-  };
+  }
 }
 
 h3 {
   @include heading-size($h3-font-size, 1.083, rem(16));
   @include breakpoint-max(md) {
     @include heading-size($h3-mobile-font-size, 1, rem(16));
-  };
+  }
 }
 
 h4 {
   @include heading-size($h4-font-size, 1.1, rem(16));
   @include breakpoint-max(md) {
     @include heading-size($h4-mobile-font-size, 1, rem(16));
-  };
+  }
 }
 
 h5 {
   @include heading-size($h5-font-size, 1.111, rem(14));
   @include breakpoint-max(md) {
     @include heading-size($h5-mobile-font-size, 1, rem(16));
-  };
+  }
 }
 
 h6 {
   @include heading-size($h6-font-size, 1.125, rem(2));
   @include breakpoint-max(md) {
     @include heading-size($h6-mobile-font-size, 1, rem(16));
-  };
+  }
 }
 
 button,
 .btn {
-  
+  outline: none;
+  padding: 10px 20px;
+  white-space: normal;
+  border-radius: var(--t-btn-border-radius, 0);
+  display: inline-block;
+  font-size: var(--t-btn-font-size, rem(16));
+  border: 1px solid var(--t-btn-border-color);
+  font-weight: var(--t-btn-font-weight);
+  letter-spacing: var(--t-btn-spacing);
+  text-transform: var(--t-btn-text-transform);
+  transition: var(--t-btn-duration-default, 0.25s) all;
+  line-height: var(--t-btn-line-height);
+  color: var(--t-btn-primary-color);
+  background-color: var(--t-btn-primary-bg);
+  cursor: pointer;
+
+  &:hover {
+    color: var(--t-btn-text-color-hover);
+    box-shadow: 0 0 0 2px var(--t-btn-bg-hover);
+    -webkit-box-shadow: 0 0 0 2px var(--t-btn-bg-hover);
+    -moz-box-shadow: 0 0 0 2px var(--t-btn-bg-hover);
+    border-color: var(--t-btn-border-color-hover);
+    background-color: var(--t-btn-bg-hover);
+  }
+}
+
+.t-btn {
+  &__secondary {
+    color: var(--t-btn-secondary-color);
+    background-color: var(--t-btn-secondary-bg);
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 2px;
+  line-height: normal;
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    right: 0;
+    bottom: var(--t-link-py, 0);
+    width: 0;
+    height: 1px;
+    background-color: rgb(0, 0, 0);
+    transition: 0.3s ease-in-out;
+  }
+
+  &:hover {
+    &::after {
+      width: 100%;
+      left: 0;
+    }
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin-bottom: 0;
+  font-size: rem(16);
 }

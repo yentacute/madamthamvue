@@ -4,3 +4,12 @@
   line-height: $lineHeight;
   margin-bottom: $marginBottom;
 }
+
+@mixin set-value($name, $property, $value, $unit) {
+  @for $i from 0 to $value {
+    .#{$name}-#{$i} {
+      #{$property}: #{$i}#{$unit};
+    }
+  }
+}
+

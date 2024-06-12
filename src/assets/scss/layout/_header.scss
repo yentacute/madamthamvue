@@ -1,0 +1,15 @@
+.t-header {
+  &__wrapper {
+    padding: 12px 0;
+  }
+
+  &__menu {
+    ul {
+      li {
+        a {
+          padding: var(--t-link-py) var(--t-link-px);
+        }
+      }
+    }
+  }
+}

@@ -1,14 +1,14 @@
 <template>
-  <div>
-    <h1>test abc def</h1>
-    <button>Button</button>
-  </div>
+  <LayoutComponent>
+
+
+  </LayoutComponent>
 </template>
 
 <script setup>
+  import LayoutComponent from "../components/layout/index.vue";
 
 </script>
 
 <style lang="scss" scoped>
-
 </style>

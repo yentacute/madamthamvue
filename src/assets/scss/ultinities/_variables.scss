@@ -1,4 +1,26 @@
 :root {
-  --btn-primary-bg: rgba(255, 255, 255, 1);
-  --btn-secondary-bg: rgb(0, 0, 0);
+  --t-btn-primary-bg: rgb(0, 0, 0);
+  --t-btn-secondary-bg: rgb(255, 255, 255);
+  --t-duration-default: 0.25s;
+  --t-btn-font-weight: 500;
+  --t-btn-spacing: 0;
+  --t-btn-text-transform: normal;
+  --t-btn-border-radius: 0;
+  --t-btn-line-height: normal;
+  --t-btn-font-size: rem(16);
+  --t-btn-border-color: rgb(0, 0, 0);
+  --t-btn-primary-color: rgb(255, 255, 255);
+  --t-btn-secondary-color: rgb(0, 0, 0);
+  --t-btn-text-color-hover: rgb(255, 255, 255);
+  --t-btn-bg-hover: rgb(34, 34, 34);
+  --t-btn-border-color-hover: rgb(34, 34, 34);
+
+  // text color
+
+  --t-text-color: #222222;
+
+  // link padding
+
+  --t-link-py: rem(20);
+  --t-link-px: rem(16);
 }
