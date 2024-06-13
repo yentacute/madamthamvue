@@ -17,14 +17,14 @@ body {
 }
 
 .container {
-  max-width: 1270px;
+  max-width: var(--container-width, 1280px);
   margin: 0 auto;
   padding: 0 15px;
   width: 100%;
 }
 
 .container-fluid {
-  max-width: 1472px;
+  max-width: var(--container-width, 1472px);
   margin: 0 auto;
   padding: 0 1rem;
 }
@@ -33,4 +33,24 @@ body {
   max-width: 100%;
   margin: 0 auto;
   padding: 0 1rem;
+}
+
+/* using svg icon of fontawesome */
+svg {
+  width: 16px;
+  height: 16px;
+}
+.t-svg-icon {
+  &--small {
+    width: 16px;
+    height: 16px;
+  }
+  &--medium {
+    width: 20px;
+    height: 20px;
+  }
+  &--small {
+    width: 32px;
+    height: 32px;
+  }
 }

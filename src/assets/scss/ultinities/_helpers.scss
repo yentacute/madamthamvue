@@ -169,6 +169,9 @@
         @include justify-styles(evently, space-evently);
       }
     }
+
+    @include divide-value(w, width, 12);
+    @include divide-value(h, height, 12);
   }
 }
 
@@ -198,5 +201,22 @@
   @include breakpoint-max(md) {
     padding-top: var(--t-section-padding-top-md, 32px);
     padding-bottom: var(--t-section-padding-bottom-md, 32px);
+  }
+}
+
+/* set width width 12 col */
+
+
+@include divide-value(w, width, 12);
+@include divide-value(h, height, 12);
+
+/* text color */
+
+.text {
+  &-white {
+    color: var(--t-white-color, #fff);
+  }
+  &-black {
+    color: var(--t-black-color, #222);
   }
 }

@@ -1,31 +1,60 @@
 <template>
   <header class="t-header">
+    <SlideAnnouncement 
+      :slide-items="announcements" 
+      :pagination="false"
+      :space-between="0"
+       />
     <div class="container">
-      <div class="t-header__wrapper t-flex justify-between">
-
-        <div class="t-header__menu">
+      <div class="t-header__wrapper t-flex align-center">
+        <div class="t-header__logo w-2-12 t-flex justify-start">
+          <a href="">
+            <img src="../../assets/images/logo.png" alt="" />
+          </a>
+        </div>
+        <div class="t-header__menu w-8-12 t-flex justify-center">
           <ul class="t-flex">
             <li>
-              <a href="">Trang chủ</a>
+              <a href="" class="t-link">Trang chủ</a>
             </li>
             <li>
-              <a href="">Dịch vụ</a>
+              <a href="" class="t-link">Dịch vụ</a>
             </li>
             <li>
-              <a href="">Liên hệ</a>
+              <a href="" class="t-link">Shop</a>
             </li>
             <li>
-              <a href="">Về chúng tôi</a>
+              <a href="" class="t-link">Liên hệ</a>
+            </li>
+            <li>
+              <a href="" class="t-link">Về chúng tôi</a>
             </li>
           </ul>
         </div>
 
-        <div class="t-header__logo">
-          <img src="../../assets/images/logo.png" alt="" />
-        </div>
-
-        <div class="t-header__right">
-          <button class="btn t-btn__secondary">Đăng nhập</button>
+        <div class="t-header__right w-2-12 t-flex justify-end">
+          <a href="">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+              class="t-svg-icon--medium"
+            >
+              <path
+                d="M304 128a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM49.3 464H398.7c-8.9-63.3-63.3-112-129-112H178.3c-65.7 0-120.1 48.7-129 112zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3z"
+              />
+            </svg>
+          </a>
+          <a href="">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+              class="t-svg-icon--medium"
+            >
+              <path
+                d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
+              />
+            </svg>
+          </a>
         </div>
       </div>
     </div>
@@ -33,4 +62,20 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
+import SlideAnnouncement from '../slide/AnnouncementSlide.vue'
+const announcements = ref([
+  {
+    title: 'Get 20% Off Your First Cleaning Service!',
+    icon: "<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor' stroke-width='2'><path stroke-linecap='round' stroke-linejoin='round' d='M4 12h16M4 12l4 4m-4-4l4-4' /></svg>"
+  },
+  {
+    title: 'Eco-Friendly Cleaning Solutions!',
+    icon: "<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor' stroke-width='2'><path stroke-linecap='round' stroke-linejoin='round' d='M12 8v8m4-4H8' /></svg>"
+  },
+  {
+    title: 'Exclusive Pet Care Packages Available!',
+    icon: "<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor' stroke-width='2'><path stroke-linecap='round' stroke-linejoin='round' d='M10 15v4a2 2 0 002 2h0a2 2 0 002-2v-4m-8 0v4a2 2 0 002 2h0a2 2 0 002-2v-4m6-8l.3-.6a2 2 0 00-1.8-2.8h0a2 2 0 00-1.8 2.8l.3.6m2 0l-.3-.6a2 2 0 00-1.8-2.8h0a2 2 0 00-1.8 2.8l.3.6' /></svg>"
+  }
+])
 </script>

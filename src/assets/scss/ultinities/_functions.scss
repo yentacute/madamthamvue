@@ -1,8 +1,8 @@
 @use 'sass:math';
 
-@function rem($pixel) {
+@function remUnit($pixel) {
   @if math.is-unitless($pixel) {
-    @return math.div($pixel, 16) + rem;
+    @return math.div($pixel, 16) * 1rem;
   } @else {
     @error "Don't use units when using the rem function; only use numbers";
   }

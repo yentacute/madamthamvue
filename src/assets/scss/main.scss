@@ -1,13 +1,11 @@
 
+@use 'ultinities/functions' as f;
 
-@import 'layout/navigation';
-@import 'layout/grid';
+@use 'ultinities/breakpoints' as *;
+
 @import 'layout/header';
 @import 'layout/footer';
-@import 'layout/sidebar';
 @import 'layout/forms';
-@import 'ultinities/breakpoints';
-@import 'ultinities/functions';
 @import 'ultinities/mixins';
 @import 'ultinities/variables';
 @import 'ultinities/animations';
