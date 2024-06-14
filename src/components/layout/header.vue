@@ -28,7 +28,7 @@
                 <svg class="t-svg-icon--custom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-labelledby="chevronUpIconTitle" stroke="#222" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" fill="none" color="#222"> <title id="chevronUpIconTitle">Chevron Up</title> <polyline points="6 14 12 8 18 14 18 14"/> </svg>
               </a>
               <ul class="t-menu__sub-menu">
-                <li class="t-menu__sub-menu-item">
+                <li class="t-menu__sub-menu-item t-menu__sub-menu-item--has-child">
                   <a href="">{{ menu.HomeCleanServices.title }}</a>
                   <ul class="t-menu__sub-child">
                     <li v-for="(item, index) in menu.HomeCleanServices.submenus" :key="index" class="t-menu__sub-child-item" >
