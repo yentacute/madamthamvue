@@ -1,5 +1,5 @@
 <template>
-  <div class="t-announcement">
+  <div class="t-announcement" v-show="props.showAnnouncement">
     <div class="container h-100">
         <swiper
           :slides-per-view="props.slidePerView"
@@ -19,17 +19,27 @@
             </swiper-slide>
         </swiper>
     </div>
+    <div class="t-announcement__close" @click="handleClose">
+      <svg class="t-svg-icon--medium" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </div>
   </div>
 </template>
 
 <script setup>
+import { defineProps, defineEmits } from 'vue'
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay  } from 'swiper/modules'
 
 import 'swiper/scss';
 import 'swiper/scss/autoplay';
+const emit = defineEmits(['closeAnnouncement'])
 
+const handleClose = () => {
+  emit('closeAnnouncement', false);
+}
 const props = defineProps({
   slidePerView: {
     type: Number,
@@ -63,6 +73,10 @@ const props = defineProps({
       delay: 3000, 
       disableOnInteraction: false
     })
+  },
+  showAnnouncement: {
+    type: Boolean,
+    default: true
   }
 })
 </script>
@@ -74,15 +88,24 @@ const props = defineProps({
   h6 {
     --heading-margin-bottom-desktop: 0;
     --heading-margin-bottom-mobile: 0;
+    font-weight: 500;
   }
 
   .t-announcement {
     background-color: var(--anouncementBg);
     color: var(--anouncementColor);
     --swiper-navigation-color: var(--anouncementColor);
+    position: relative;
 
     &__content {
       min-height: 40px;
+    }
+
+    &__close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
     }
   }
 </style>

@@ -1,0 +1,61 @@
+{
+  "HomeCleanServices": {
+    "title": "Dịch Vụ Home Clean",
+    "submenus": [
+      {
+        "title": "Dọn Dẹp Toàn Diện",
+        "description": "Cung cấp dịch vụ dọn dẹp toàn bộ nhà cửa, bao gồm lau sàn, hút bụi, và vệ sinh nhà bếp, phòng tắm, phòng khách, v.v."
+      },
+      {
+        "title": "Vệ Sinh Định Kỳ",
+        "description": "Dịch vụ dọn dẹp định kỳ hàng tuần, hàng tháng, hoặc theo yêu cầu riêng của khách hàng để giữ cho nhà cửa luôn sạch sẽ."
+      },
+      {
+        "title": "Dọn Dẹp Chuyên Sâu",
+        "description": "Dịch vụ vệ sinh chuyên sâu bao gồm làm sạch đồ nội thất, giặt thảm, rèm cửa, và vệ sinh kỹ lưỡng những khu vực khó tiếp cận."
+      },
+      {
+        "title": "Dọn Dẹp Sau Xây Dựng",
+        "description": "Dịch vụ chuyên làm sạch nhà cửa sau khi hoàn thành công trình xây dựng hoặc sửa chữa, bao gồm dọn dẹp bụi bẩn, rác thải xây dựng, và làm sạch bề mặt."
+      },
+      {
+        "title": "Vệ Sinh Cửa Kính",
+        "description": "Cung cấp dịch vụ vệ sinh cửa kính, cửa sổ để đảm bảo bề mặt kính luôn sáng bóng và không có vết bẩn."
+      }
+    ]
+  },
+  "PetCareServices": {
+    "title": "Dịch Vụ Chăm Sóc Thú Cưng",
+    "submenus": [
+      {
+        "title": "Chăm Sóc Hàng Ngày",
+        "description": "Dịch vụ chăm sóc thú cưng hàng ngày bao gồm cho ăn, chơi, dắt đi dạo, và kiểm tra sức khỏe cơ bản."
+      },
+      {
+        "title": "Tắm Rửa & Làm Đẹp",
+        "description": "Dịch vụ tắm rửa, cắt tỉa lông và làm đẹp cho thú cưng để giữ chúng luôn sạch sẽ và thơm tho."
+      },
+      {
+        "title": "Dịch Vụ Trông Giữ",
+        "description": "Cung cấp dịch vụ trông giữ thú cưng khi chủ nhân vắng nhà, bao gồm chăm sóc toàn diện và đảm bảo thú cưng được an toàn và thoải mái."
+      },
+      {
+        "title": "Huấn Luyện Thú Cưng",
+        "description": "Dịch vụ huấn luyện các kỹ năng cơ bản và nâng cao cho thú cưng, giúp chúng nghe lời và cư xử tốt hơn."
+      },
+      {
+        "title": "Dịch Vụ Y Tế",
+        "description": "Dịch vụ chăm sóc sức khỏe, bao gồm kiểm tra y tế định kỳ, tiêm phòng, và tư vấn chăm sóc sức khỏe cho thú cưng."
+      }
+    ]
+  },
+  "shop": [
+    {
+      "title": "Thiết bị dọn dẹp"
+    },
+    {
+      "title": "Thiết bị dọn dẹp"
+    }
+
+  ]
+}

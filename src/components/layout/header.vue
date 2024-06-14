@@ -4,6 +4,8 @@
       :slide-items="announcements" 
       :pagination="false"
       :space-between="0"
+      @closeAnnouncement="handleClose"
+      :showAnnouncement = showAnnouncement
        />
     <div class="container">
       <div class="t-header__wrapper t-flex align-center">
@@ -13,21 +15,50 @@
           </a>
         </div>
         <div class="t-header__menu w-8-12 t-flex justify-center">
-          <ul class="t-flex">
-            <li>
-              <a href="" class="t-link">Trang chủ</a>
+          <ul class="t-menu__list t-flex">
+            <li class="t-menu">
+              <a href="" class="t-menu__parent t-link">Trang chủ</a>
             </li>
-            <li>
-              <a href="" class="t-link">Dịch vụ</a>
+            <li class="t-menu t-menu__has-sub">
+              <a href="" class="t-menu__parent t-link">
+                <span class="t-menu__title">Dịch vụ</span>
+                <svg class="t-svg-icon--small" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#222" version="1.1" id="Layer_1" viewBox="0 0 407.437 407.437" xml:space="preserve">
+                  <polygon points="386.258,91.567 203.718,273.512 21.179,91.567 0,112.815 203.718,315.87 407.437,112.815 "/>
+                </svg>
+                <svg class="t-svg-icon--custom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-labelledby="chevronUpIconTitle" stroke="#222" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" fill="none" color="#222"> <title id="chevronUpIconTitle">Chevron Up</title> <polyline points="6 14 12 8 18 14 18 14"/> </svg>
+              </a>
+              <ul class="t-menu__sub-menu">
+                <li class="t-menu__sub-menu-item">
+                  <a href="">{{ menu.HomeCleanServices.title }}</a>
+                  <ul class="t-menu__sub-child">
+                    <li v-for="(item, index) in menu.HomeCleanServices.submenus" :key="index" class="t-menu__sub-child-item" >
+                      <a href="">{{ item.title }}</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="t-menu__sub-menu-item">
+                  <a href="">{{ menu.PetCareServices.title }}</a>
+                  <ul class="t-menu__sub-child">
+                    <li v-for="(item, index) in menu.PetCareServices.submenus" :key="index" class="t-menu__sub-child-item" >
+                      <a href="">{{ item.title }}</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
             </li>
-            <li>
-              <a href="" class="t-link">Shop</a>
+            <li class="t-menu t-menu__has-sub">
+              <a href="" class="t-menu__parent t-link">Shop</a>
+              <ul class="t-menu__sub-menu">
+                <li v-for="(item, index) in menu.shop" :key="index" class="t-menu__sub-menu-item">
+                  <a href="">{{ item.title }}</a>
+                </li>
+              </ul>
             </li>
-            <li>
-              <a href="" class="t-link">Liên hệ</a>
+            <li class="t-menu">
+              <a href="" class="t-menu__parent t-link">Liên hệ</a>
             </li>
-            <li>
-              <a href="" class="t-link">Về chúng tôi</a>
+            <li class="t-menu">
+              <a href="" class="t-menu__parent t-link">Về chúng tôi</a>
             </li>
           </ul>
         </div>
@@ -64,6 +95,7 @@
 <script setup>
 import { ref } from 'vue'
 import SlideAnnouncement from '../slide/AnnouncementSlide.vue'
+import menu from '../../data/menu.json'
 const announcements = ref([
   {
     title: 'Get 20% Off Your First Cleaning Service!',
@@ -78,4 +110,11 @@ const announcements = ref([
     icon: "<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor' stroke-width='2'><path stroke-linecap='round' stroke-linejoin='round' d='M10 15v4a2 2 0 002 2h0a2 2 0 002-2v-4m-8 0v4a2 2 0 002 2h0a2 2 0 002-2v-4m6-8l.3-.6a2 2 0 00-1.8-2.8h0a2 2 0 00-1.8 2.8l.3.6m2 0l-.3-.6a2 2 0 00-1.8-2.8h0a2 2 0 00-1.8 2.8l.3.6' /></svg>"
   }
 ])
+
+const showAnnouncement = ref(true);
+const activeHover = ref(false);
+
+const handleClose = (value) => {
+  showAnnouncement.value = value;
+}
 </script>

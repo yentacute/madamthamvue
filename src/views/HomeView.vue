@@ -1,7 +1,6 @@
 <template>
   <LayoutComponent>
 
-    <h1>test rem why it sucked</h1>
   </LayoutComponent>
 </template>
 
