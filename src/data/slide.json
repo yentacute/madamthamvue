@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Ưu Đãi Vệ Sinh Mùa Xuân",
+    "subtitle": "Làm Mới Ngôi Nhà",
+    "description": "Giảm 20% cho dịch vụ vệ sinh nhà. Ưu đãi có hạn!",
+    "image": "./src/assets/images/slider/1.webp",
+    "url": "https://example.com/spring-cleaning"
+  },
+  {
+    "title": "Gói Chăm Sóc Thú Cưng",
+    "subtitle": "Ưu Đãi Đặc Biệt",
+    "description": "Các gói tắm rửa, dắt đi dạo và trông giữ. Thú cưng khỏe mạnh và hạnh phúc!",
+    "image": "./src/assets/images/slider/2.jpg",
+    "url": "https://example.com/pet-care"
+  },
+  {
+    "title": "Dịch Vụ Vệ Sinh Xanh",
+    "subtitle": "Bảo Vệ Môi Trường",
+    "description": "Khám phá dịch vụ vệ sinh thân thiện môi trường. Bảo vệ nhà và môi trường.",
+    "image": "./src/assets/images/slider/3.jpg",
+    "url": "https://example.com/eco-cleaning"
+  },
+  {
+    "title": "Tổ Chức Nhà Cửa",
+    "subtitle": "Dọn Dẹp Gọn Gàng",
+    "description": "Chuyên gia giúp bạn dọn dẹp và sắp xếp nhà cửa gọn gàng và đẹp mắt.",
+    "image": "./src/assets/images/slider/4.jpg",
+    "url": "https://example.com/home-organization"
+  },
+  {
+    "title": "Vệ Sinh Khẩn Cấp",
+    "subtitle": "Dịch Vụ 24/7",
+    "description": "Có sự cố? Đội ngũ sẵn sàng hỗ trợ 24/7 với dịch vụ vệ sinh nhanh chóng.",
+    "image": "./src/assets/images/slider/5.jpg",
+    "url": "https://example.com/emergency-cleaning"
+  }
+]

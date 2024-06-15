@@ -19,25 +19,36 @@
             <li class="t-menu">
               <a href="" class="t-menu__parent t-link">Trang chủ</a>
             </li>
-            <li class="t-menu t-menu__has-sub">
+            <li class="t-menu t-menu__has-sub"
+              @mouseover="handleHover"
+              @mouseout="handleCancelHover"
+            >
               <a href="" class="t-menu__parent t-link">
                 <span class="t-menu__title">Dịch vụ</span>
-                <svg class="t-svg-icon--small" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#222" version="1.1" id="Layer_1" viewBox="0 0 407.437 407.437" xml:space="preserve">
-                  <polygon points="386.258,91.567 203.718,273.512 21.179,91.567 0,112.815 203.718,315.87 407.437,112.815 "/>
+                <svg class="t-svg-icon--small" :class="{'visibility-hidden': !inActiveHover, 'visibility-visible': inActiveHover}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
+                </svg>  
+                <svg class="t-svg-icon--small" :class="{'visibility-visible': activeHover, 'visibility-hidden': !activeHover}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"/>
                 </svg>
-                <svg class="t-svg-icon--custom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-labelledby="chevronUpIconTitle" stroke="#222" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" fill="none" color="#222"> <title id="chevronUpIconTitle">Chevron Up</title> <polyline points="6 14 12 8 18 14 18 14"/> </svg>
               </a>
               <ul class="t-menu__sub-menu">
                 <li class="t-menu__sub-menu-item t-menu__sub-menu-item--has-child">
-                  <a href="">{{ menu.HomeCleanServices.title }}</a>
+                  <a class="t-menu__sub-title" href="">
+                    <span>{{ menu.HomeCleanServices.title }}</span>
+                    <IconChevronRight/>
+                  </a>
                   <ul class="t-menu__sub-child">
                     <li v-for="(item, index) in menu.HomeCleanServices.submenus" :key="index" class="t-menu__sub-child-item" >
                       <a href="">{{ item.title }}</a>
                     </li>
                   </ul>
                 </li>
-                <li class="t-menu__sub-menu-item">
-                  <a href="">{{ menu.PetCareServices.title }}</a>
+                <li class="t-menu__sub-menu-item t-menu__sub-menu-item--has-child">
+                  <a class="t-menu__sub-title" href="">
+                    <span>{{ menu.PetCareServices.title }}</span>
+                    <IconChevronRight/>
+                  </a>
                   <ul class="t-menu__sub-child">
                     <li v-for="(item, index) in menu.PetCareServices.submenus" :key="index" class="t-menu__sub-child-item" >
                       <a href="">{{ item.title }}</a>
@@ -46,8 +57,19 @@
                 </li>
               </ul>
             </li>
-            <li class="t-menu t-menu__has-sub">
-              <a href="" class="t-menu__parent t-link">Shop</a>
+            <li class="t-menu t-menu__has-sub"
+              @mouseover="handleHover"
+              @mouseout="handleCancelHover"
+            >
+              <a href="" class="t-menu__parent t-link">
+                <span class="t-menu__title">Shop</span>
+                <svg class="t-svg-icon--small" :class="{'visibility-hidden': !inActiveHover, 'visibility-visible': inActiveHover}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
+                </svg>  
+                <svg class="t-svg-icon--small" :class="{'visibility-visible': activeHover, 'visibility-hidden': !activeHover}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"/>
+                </svg>
+              </a>
               <ul class="t-menu__sub-menu">
                 <li v-for="(item, index) in menu.shop" :key="index" class="t-menu__sub-menu-item">
                   <a href="">{{ item.title }}</a>
@@ -96,6 +118,7 @@
 import { ref } from 'vue'
 import SlideAnnouncement from '../slide/AnnouncementSlide.vue'
 import menu from '../../data/menu.json'
+import IconChevronRight from '../icons/IconChevronRight.vue'
 const announcements = ref([
   {
     title: 'Get 20% Off Your First Cleaning Service!',
@@ -113,8 +136,19 @@ const announcements = ref([
 
 const showAnnouncement = ref(true);
 const activeHover = ref(false);
+const inActiveHover = ref(true);
 
 const handleClose = (value) => {
   showAnnouncement.value = value;
+}
+
+const handleHover = () => {
+  activeHover.value = true;
+  inActiveHover.value = false;
+}
+
+const handleCancelHover = () => {
+  activeHover.value = false;
+  inActiveHover.value = true;
 }
 </script>

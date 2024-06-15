@@ -32,7 +32,7 @@ body {
 .container-full {
   max-width: 100%;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding:0 ;
 }
 
 /* using svg icon of fontawesome */
@@ -42,8 +42,8 @@ svg {
 }
 .t-svg-icon {
   &--small {
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
   }
   &--medium {
     width: 20px;

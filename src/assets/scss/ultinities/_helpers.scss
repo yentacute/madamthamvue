@@ -220,3 +220,28 @@
     color: var(--t-black-color, #222);
   }
 }
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+.visibility-hidden {
+  transition: all var(--t-duration-default);
+  visibility: hidden;
+  opacity: 0;
+  width: 0!important;
+}
+.visibility-visible {
+  transition: all var(--t-duration-default);
+  visibility: visible;
+  opacity: 1;
+  width: auto !important;
+}
+
+.t-subtitle {
+  font-size: #{f.remUnit(18)};
+  margin-bottom: var(--t-subtitle-bottom-spacing, 12px);
+}

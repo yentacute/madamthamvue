@@ -1,6 +1,6 @@
 {
   "HomeCleanServices": {
-    "title": "Dịch Vụ Home Clean",
+    "title": "Home Clean",
     "submenus": [
       {
         "title": "Dọn Dẹp Toàn Diện",
@@ -25,7 +25,7 @@
     ]
   },
   "PetCareServices": {
-    "title": "Dịch Vụ Chăm Sóc Thú Cưng",
+    "title": "Chăm Sóc Thú Cưng",
     "submenus": [
       {
         "title": "Chăm Sóc Hàng Ngày",
@@ -54,8 +54,7 @@
       "title": "Thiết bị dọn dẹp"
     },
     {
-      "title": "Thiết bị dọn dẹp"
+      "title": "Đồ cho boss"
     }
-
   ]
 }
