@@ -1,7 +1,7 @@
 
-@use 'ultinities/functions' as f;
-
 @use 'ultinities/breakpoints' as *;
+
+@use 'ultinities/functions' as *;
 
 @import 'layout/header';
 @import 'layout/footer';
@@ -13,4 +13,5 @@
 @import 'ultinities/grid';
 @import 'base/typo';
 @import 'base/global';
+
 

@@ -5,23 +5,23 @@
   --t-btn-font-weight: 600;
   --t-btn-spacing: 0;
   --t-btn-text-transform: normal;
-  --t-btn-border-radius: 0;
+  --t-btn-border-radius: 50px;
   --t-btn-line-height: normal;
-  --t-btn-font-size: #{f.remUnit(16)};
-  --t-btn-border-color: rgb(255, 98, 0);
+  --t-btn-font-size: #{rem(16)};
+  --t-btn-border-color: rgb(255, 165, 0);
   --t-btn-primary-color: rgb(255, 255, 255);
   --t-btn-secondary-color: rgb(255, 98, 0);
   --t-btn-text-color-hover: rgb(255, 255, 255);
   --t-btn-bg-hover: rgb(255, 98, 0);
   --t-btn-border-color-hover: rgb(255, 98, 0);
 
-  // text color
+  // text color 
 
-  --t-text-color: #222222;
-
+  --t-text-color: rgb(102, 102, 102);
+  --t-heading-color: rgb(15,66,38);
   // link padding
-  --t-link-py: #{f.remUnit(20)};
-  --t-link-px: #{f.remUnit(16)};
+  --t-link-py: #{rem(20)};
+  --t-link-px: #{rem(16)};
 
   --t-logo-width-desktop: 100px;
   --t-logo-width-mobile: 110px;
@@ -34,5 +34,4 @@
 
   --anouncementBg: rgb(218, 63, 63);
   --anouncementColor: rgb(255, 255, 255);
-
 }

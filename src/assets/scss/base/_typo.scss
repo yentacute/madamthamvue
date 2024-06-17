@@ -1,72 +1,74 @@
-$h1-font-size: #{f.remUnit(60)};
-$h2-font-size: #{f.remUnit(42)};
-$h3-font-size: #{f.remUnit(32)};
-$h4-font-size: #{f.remUnit(22)};
-$h5-font-size: #{f.remUnit(18)};
+$h1-font-size: #{rem(60)};
+$h2-font-size: #{rem(42)};
+$h3-font-size: #{rem(32)};
+$h4-font-size: #{rem(22)};
+$h5-font-size: #{rem(18)};
 $h6-font-size: 1rem;
-$h1-mobile-font-size: #{f.remUnit(36)};
-$h2-mobile-font-size: #{f.remUnit(28)};
-$h3-mobile-font-size: #{f.remUnit(24)};
-$h4-mobile-font-size: #{f.remUnit(18)};
-$h5-mobile-font-size: #{f.remUnit(16)};
-$h6-mobile-font-size: #{f.remUnit(14)};
+$h1-mobile-font-size: #{rem(36)};
+$h2-mobile-font-size: #{rem(28)};
+$h3-mobile-font-size: #{rem(24)};
+$h4-mobile-font-size: #{rem(18)};
+$h5-mobile-font-size: #{rem(16)};
+$h6-mobile-font-size: #{rem(14)};
 
 /* font-face */
 
 @font-face {
   font-family: 'T-Font-Regular';
-  src:
-    url('@/assets/fonts/Roboto/Roboto-Regular.ttf') format('woff');
+  src: url('@/assets/fonts/Poppins/Poppins-Regular.ttf') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
   margin-top: 0;
+  color: var(--t-heading-color);
 }
-h1 {
-  @include heading-size($h1-font-size, 1, #{f.remUnit(24)});
+h1,
+.h1 {
+  @include heading-size($h1-font-size, 1.3, #{rem(12)});
   @include breakpoint-max(md) {
     @include heading-size($h1-mobile-font-size, 1, var(--heading-margin-bottom-desktop, 0));
   }
 }
 
-h2 {
-  @include heading-size($h2-font-size, 1.067, var(--heading-margin-bottom-desktop, 0));
+h2,
+.h2 {
+  @include heading-size($h2-font-size, 1.3, var(--heading-margin-bottom-desktop, 0));
   @include breakpoint-max(md) {
     @include heading-size($h2-mobile-font-size, 1, var(--heading-margin-bottom-desktop, 0));
   }
 }
 
-h3 {
-  @include heading-size($h3-font-size, 1.083, var(--heading-margin-bottom-desktop, 0));
+h3, .h3 {
+  @include heading-size($h3-font-size, 1.3, var(--heading-margin-bottom-desktop, 0));
   @include breakpoint-max(md) {
     @include heading-size($h3-mobile-font-size, 1, var(--heading-margin-bottom-desktop, 0));
   }
 }
 
-h4 {
-  @include heading-size($h4-font-size, 1.1, var(--heading-margin-bottom-desktop, 0));
+h4, .h4 {
+  @include heading-size($h4-font-size, 1.3, var(--heading-margin-bottom-desktop, 0));
   @include breakpoint-max(md) {
     @include heading-size($h4-mobile-font-size, 1, var(--heading-margin-bottom-desktop, 0));
   }
 }
 
-h5 {
-  @include heading-size($h5-font-size, 1.111, var(--heading-margin-bottom-desktop, 0));
+h5, .h5 {
+  @include heading-size($h5-font-size, 1.3, var(--heading-margin-bottom-desktop, 0));
   @include breakpoint-max(md) {
     @include heading-size($h5-mobile-font-size, 1, var(--heading-margin-bottom-desktop, 0));
   }
 }
 
-h6 {
-  @include heading-size($h6-font-size, 1.125, var(--heading-margin-bottom-desktop, 0));
+h6, .h6 {
+  @include heading-size($h6-font-size, 1.3, var(--heading-margin-bottom-desktop, 0));
   @include breakpoint-max(md) {
     @include heading-size($h6-mobile-font-size, 1, var(--heading-margin-bottom-desktop, 0));
   }
@@ -79,7 +81,7 @@ button,
   white-space: normal;
   border-radius: var(--t-btn-border-radius, 0);
   display: inline-block;
-  font-size: var(--t-btn-font-size, #{f.remUnit(16)});
+  font-size: var(--t-btn-font-size, #{rem(16)});
   border: 1px solid var(--t-btn-border-color);
   font-weight: var(--t-btn-font-weight);
   letter-spacing: var(--t-btn-spacing);
@@ -148,6 +150,8 @@ ul {
 }
 
 p {
-  margin-bottom: 0;
-  font-size: #{f.remUnit(16)};
+  margin-bottom: #{rem(12)};
+  margin-top: 0;
+  font-size: #{rem(16)};
+  line-height: 1.8;
 }

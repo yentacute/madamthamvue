@@ -1,9 +1,9 @@
 .t-header {
-  box-shadow: 0px 4px 5px -1px rgba(237, 230 ,230, 0.29);
-  -webkit-box-shadow: 0px 4px 5px -1px rgba(237, 230 ,230, 0.29);
-  -moz-box-shadow: 0px 4px 5px -1px rgba(237, 230 ,230, 0.29);
+  box-shadow: 0px 4px 5px -1px rgba(237, 230, 230, 0.29);
+  -webkit-box-shadow: 0px 4px 5px -1px rgba(237, 230, 230, 0.29);
+  -moz-box-shadow: 0px 4px 5px -1px rgba(237, 230, 230, 0.29);
   &__wrapper {
-    padding: #{f.remUnit(8)} 0;
+    padding: #{rem(8)} 0;
   }
 
   .t-menu {
@@ -13,17 +13,24 @@
       padding: var(--t-link-py) var(--t-link-px);
       display: flex;
       align-items: center;
-      gap: 8px;  
-      
+    }
+
+    &__title {
+      margin-right: 8px;
+    }
+
+    .t-menu__sub-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     &__has-sub {
       &:hover {
         .t-menu__sub-menu {
-          transform: translateZ(0);
           pointer-events: auto;
           opacity: 1;
-          visibility: visible;  
+          visibility: visible;
         }
       }
     }
@@ -34,10 +41,9 @@
       &--has-child {
         &:hover {
           .t-menu__sub-child {
-            transform: translateX(95%);
             pointer-events: auto;
             opacity: 1;
-            visibility: visible;  
+            visibility: visible;
           }
         }
       }
@@ -48,8 +54,8 @@
       width: var(--submenu-column-width, 250px);
       padding: 1rem;
       box-shadow: 0 5px 15px #00000012;
-      transition: all var(--t-duration-default, .25s);
-      
+      transition: all var(--t-duration-default, 0.25s);
+
       li {
         &:hover {
           background-color: #dedede;
@@ -57,10 +63,9 @@
       }
       a {
         padding: 8px 12px;
-        transition: all var(--t-duration-default, .25s);
+        transition: all var(--t-duration-default, 0.25s);
         display: block;
         line-height: 1.5;
-       
       }
     }
 
@@ -70,22 +75,24 @@
 
     &__sub-menu {
       position: absolute;
-      transform: translate3d(0, 20px, 0);
+      transform: translate3d(0, 12px, 0);
       transform-origin: center;
       visibility: hidden;
       opacity: 0;
-      z-index: 50;
-    } 
+      z-index: 100;
+      background-color: rgba(255, 255, 255, 1);
+    }
 
     &__sub-child {
       position: absolute;
       top: 0;
       right: 0;
-      transform: translateX(0);
+      transform: translateX(100%);
       transform-origin: center;
       visibility: hidden;
       opacity: 0;
-      z-index: 50;
+      z-index: 100;
+      background-color: rgba(255, 255, 255, 1);
     }
     .t-svg-icon--custom {
       width: 22px;
