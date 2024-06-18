@@ -3,11 +3,12 @@
     <HomeSlider
       :slide-items="slideData"
       :space-between="0"
-      :autoplay="false"
+      :autoplay="true"
     />
     <Information />
 
     <MultipleColumns />
+    <CompareImageVue/>
   </LayoutComponent>
 </template>
 
@@ -17,6 +18,10 @@ import HomeSlider from '../components/slide/HomeSlider.vue'
 import slideData from '../data/slide.json'
 import Information from '../components/readmore/index.vue'
 import MultipleColumns from '../components/MultipleColumns.vue'
+import CompareImageVue from '@/components/CompareImage.vue'
+
+
+
 </script>
 
 <style lang="scss" scoped>

@@ -89,6 +89,7 @@ const props = defineProps({
     --heading-margin-bottom-desktop: 0;
     --heading-margin-bottom-mobile: 0;
     font-weight: 500;
+    color: #fff;
   }
 
   .t-announcement {
