@@ -14,7 +14,7 @@
       >
         <swiper-slide v-for="(item, index) in props.slideItems" :key="index">
           <div class="t-slider__wrapper">
-            <img :src="item.image" alt="" />
+            <img :src="getImageUrl(item.image)" alt="" />
             <div class="t-slider__content-container">
               <div class="t-slider__content text-white">
                 <p class="t-subtitle t-slider__sub-title">
@@ -95,6 +95,10 @@ const props = defineProps({
     default: 'fade'
   }
 })
+  const getImageUrl = (name) => {
+    return new URL(`../../assets/images/slider/${name}`, import.meta.url).href
+  }
+
 </script>
 
 <style lang="scss">
