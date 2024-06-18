@@ -1,5 +1,5 @@
 <template>
-  <div class="section t-multiple-cols">
+  <section class="section t-multiple-cols">
     <div class="container">
       <div class="t-multiple__wrapper">
         <div class="t-grid grid-3-cols"
@@ -46,7 +46,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>

@@ -190,12 +190,12 @@
 /* section padding */
 
 .section {
-  padding-top: var(--t-section-padding-top, 100px);
-  padding-bottom: var(--t-section-padding-bottom, 100px);
+  padding-top: var(--t-section-padding-top, 50px);
+  padding-bottom: var(--t-section-padding-bottom, 50px);
 
   @include breakpoint-max(md) {
-    padding-top: var(--t-section-padding-top-md, 32px);
-    padding-bottom: var(--t-section-padding-bottom-md, 32px);
+    padding-top: var(--t-section-padding-top-md, 16px);
+    padding-bottom: var(--t-section-padding-bottom-md, 16px);
   }
 }
 

@@ -9,6 +9,7 @@
 
     <MultipleColumns />
     <CompareImageVue/>
+    <ContactFormVue/>
   </LayoutComponent>
 </template>
 
@@ -19,7 +20,7 @@ import slideData from '../data/slide.json'
 import Information from '../components/readmore/index.vue'
 import MultipleColumns from '../components/MultipleColumns.vue'
 import CompareImageVue from '@/components/CompareImage.vue'
-
+import ContactFormVue from '@/components/ContactForm.vue'
 
 
 </script>

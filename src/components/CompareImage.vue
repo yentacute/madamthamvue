@@ -1,7 +1,9 @@
 <template>
-  <section class="t-compare" ref="compareEl" 
+  <section class="t-compare"
     :style="buttonStyle"> 
-    <div class="t-compare__before t-compare--media">
+    <div class="container">
+      <div class="t-compare__container"  ref="compareEl" >
+      <div class="t-compare__before t-compare--media">
       <p class="t-compare__heading h6">Before</p>
       <div class="t-compare__image-wrapper">
         <img src="../assets/images/slider/4.jpg" alt="" />
@@ -33,6 +35,9 @@
           ></path></svg
       ></span>
     </div>
+      </div>
+    </div>
+
   </section>
 </template>
 
