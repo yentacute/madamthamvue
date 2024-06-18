@@ -1,6 +1,6 @@
 <template>
   <div class="t-slider">
-    <div class="container-full">
+    <div class="container-full h-100">
       <swiper
         :slides-per-view="props.slidePerView"
         :space-between="props.spaceBetween"
@@ -10,7 +10,9 @@
         :autoplay="props.autoplay"
         :effect="'fade'"
         :parallax="true"
+        :direction="'vertical'"
         loop
+        class="h-100"
       >
         <swiper-slide v-for="(item, index) in props.slideItems" :key="index">
           <div class="t-slider__wrapper">
@@ -80,6 +82,7 @@ const props = defineProps({
     default: () => ({
       clickable: true,
       verticalClass: 'swiper-pagination-vertical',
+      type: 'bullets',
     })
   },
   slideItems: {
@@ -104,6 +107,8 @@ const props = defineProps({
 <style lang="scss">
 .t-slider {
   width: 100%;
+    overflow: hidden;
+    height: 703px;
 
   .swiper-button-prev,
   .swiper-button-next {
@@ -113,9 +118,8 @@ const props = defineProps({
   --swiper-navigation-color: #ffffff;
   &__wrapper {
     width: 100%;
+    height: 100%;
     position: relative;
-    overflow: hidden;
-    height: 703px;
 
     img {
       position: absolute;
@@ -172,5 +176,11 @@ const props = defineProps({
       transform: translateY(-20px);
     }
   }
+  // .swiper-pagination-bullet-active {
+  //    --swiper-pagination-bullet-size: 20px;
+  //   --swiper-pagination-bullet-width: 20px;
+  //   --swiper-pagination-bullet-height: 20px;
+  // }
+
 }
 </style>

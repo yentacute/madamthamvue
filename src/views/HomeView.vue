@@ -3,11 +3,7 @@
     <HomeSlider
       :slide-items="slideData"
       :space-between="0"
-      :autoplay="true"
-      :pagination="{
-        clickable: true,
-        verticalClass: 'swiper-pagination-vertical'
-      }"
+      :autoplay="false"
     />
     <Information />
 

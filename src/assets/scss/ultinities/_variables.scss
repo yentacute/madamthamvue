@@ -34,4 +34,15 @@
 
   --anouncementBg: rgb(218, 63, 63);
   --anouncementColor: rgb(255, 255, 255);
+
+  // swiper config 
+
+  --swiper-pagination-color: rgb(255, 165, 0);
+  --swiper-pagination-bullet-size: 20px;
+  --swiper-pagination-bullet-width: 10px;
+  --swiper-pagination-bullet-height: 10px;
+  --swiper-pagination-bullet-inactive-color: #ffffff;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-right: 40px;
+  --swiper-pagination-bullet-vertical-gap: 10px
 }
