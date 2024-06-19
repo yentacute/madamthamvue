@@ -1,0 +1,55 @@
+.t-contact-form {
+  .t-form {
+    &__wrapper {
+      
+    }
+
+    &__title {
+      margin-bottom: 40px;
+    }
+
+  }
+.form-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+  .t-image-effect {
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &__first,
+    &__second {
+      overflow: hidden;
+      img {
+        transition: all .5s ease;
+      }
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+    &__first {
+      padding-left: 30%;
+    }
+
+    &__second {
+      position: absolute;
+      right: auto;
+      left: 0;
+      width: 40%;
+      aspect-ratio: var(--aspect-ratio);
+      height: auto;
+      top: var(--offset-top);
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

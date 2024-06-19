@@ -5,11 +5,12 @@
       :space-between="0"
       :autoplay="true"
     />
-    <Information />
-
     <MultipleColumns />
-    <CompareImageVue/>
+
+    <Information />
     <ContactFormVue/>
+
+    <CompareImageVue/>
   </LayoutComponent>
 </template>
 

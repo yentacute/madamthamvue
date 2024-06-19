@@ -2,62 +2,131 @@
   <section class="section t-contact-form">
     <div class="container">
       <div class="t-form__wrapper">
-        <form action="">
-          <div class="t-form__item">
-            <label for="name">Name</label>
-            <input type="text" placeholder="Name" class="t-input">
+        <div class="t-form__title">
+          <h2 class="h3">Liên hệ với chúng tôi</h2>
+          <p class="t-form__content">Luôn sẵn sàng phục vụ bạn 24/7.</p>
+        </div>
+        <div class="t-form__content">
+          <form action="">
+            <div class="form-container">
+              <div class="form-item">
+                <input type="text" placeholder="Name" class="form-field" />
+              </div>
+              <div class="form-item">
+                <input type="text" placeholder="Địa chỉ" class="form-field" />
+              </div>
+              <div class="form-item">
+                <input type="text" placeholder="SĐT" class="form-field" />
+              </div>
+              <div class="form-item">
+                <input type="datetime-local" placeholder="Thời gian" class="form-field" />
+              </div>
+              <div class="form-item">
+                <input type="text" placeholder="Diện tích" class="form-field" />
+              </div>
+              <div class="form-item">
+                <input type="text" placeholder="Mô tả chi tiết" class="form-field" />
+              </div>
+              <div class="form-item">
+                <input type="text" placeholder="Name" class="form-field" />
+              </div>
+
+              <div class="form-item">
+                <div class="form-selected">
+                  <div
+                    class="form-selected__title t-flex align-center justify-between"
+                    v-if="isEmptySelected"
+                    @click="handleShowSelect"
+                  >
+                    <span>Chọn loại phòng</span>
+                    <IconDown />
+                  </div>
+                  <div class="form-selected__title" @click="handleShowSelect" v-else>
+                    <span
+                      v-for="(item, index) in selected"
+                      :key="index"
+                      class="form-selected__name"
+                      @click="removeSelected(index)"
+                    >
+                      {{ item.name }}
+                      <IconClose />
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="form-selected__content"
+                  :class="{ 'form-selected__content--show': toggleSelect }"
+                >
+                  <ul>
+                    <li v-for="option in options" :key="option.value" @click="addTag(option)">
+                      <span>{{ option.name }}</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+             <div class="form-item">
+                <textarea
+                  placeholder="Ghi chú chi tiết tại đây..."
+                  class="form-field"
+                  rows="5"
+                ></textarea>
+              </div>
+            <div class="form-item t-flex justify-center">
+              <button type="submit">Đặt lịch</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- <div class="t-image-effect t-flex">
+          <div class="t-image-effect__first">
+            <img src="../assets/images/form/1.jpg" alt="" />
           </div>
-          <div class="t-form__item">
-            <label for="address">Địa chỉ</label>
-            <input type="text" placeholder="Địa chỉ" class="t-input">
+          <div class="t-image-effect__second" style="--aspect-ratio: 4/6; --offset-top: 10%">
+            <img src="../assets/images/form/2.jpg" alt="" />
           </div>
-          <div class="t-form__item">
-            <label for="phone">SĐT</label>
-            <input type="text" placeholder="SĐT" class="t-input">
-          </div>
-          <div class="t-form__item">
-            <label for="rooms">Số lượng</label>
-            <input type="text" placeholder="Số lượng" class="t-input">
-          </div>
-          <div class="t-form__item">
-            <label for="square">Diện tích</label>
-            <input type="text" placeholder="Diện tích" class="t-input">
-          </div>
-          <div class="t-form__item">
-            <label for="details">Mô tả chi tiết</label>
-            <input type="text" placeholder="Mô tả chi tiết" class="t-input">
-          </div>
-          <div class="t-form__item">
-            <label for="name">Name</label>
-            <input type="text" placeholder="Name" class="t-input">
-          </div>
-        </form>
+        </div> -->
       </div>
     </div>
   </section>
 </template>
 
 <script setup>
-  import { ref } from 'vue'
-import Multiselect from 'vue-multiselect'
+import { ref, computed } from 'vue'
+import IconDown from './icons/IconDown.vue'
+import IconClose from './icons/IconClose.vue'
 
-  const options = ref([
-    { id: 1, name: 'Option 1' },
-    { id: 2, name: 'Option 2' },
-    { id: 3, name: 'Option 3' },
-    { id: 4, name: 'Option 4' },
-    { id: 5, name: 'Option 5' },
-    { id: 6, name: 'Option 6' },
-    { id: 7, name: 'Option 7' },
-    { id: 8, name: 'Option 8' },
-    { id: 9, name: 'Option 9' },
-    { id: 10, name: 'Option 10' },
-    { id: 11, name: 'Option 11' },
-    { id: 12, name: 'Option 12' }
-  ])
+const selected = ref([])
+const toggleSelect = ref(false)
+const handleShowSelect = () => {
+  toggleSelect.value = !toggleSelect.value
+}
 
+const options = ref([
+  { name: 'Phòng khách', value: '1' },
+  { name: 'Phòng ngủ', value: '2' },
+  { name: 'Nhà bếp', value: '3' }
+])
+const addTag = (option) => {
+  const checkExisted = selected.value.some((item) => item.value === option.value)
+  if (checkExisted) {
+    return
+  }
+  selected.value.push({
+    name: option.name,
+    value: option.value
+  })
+}
+
+const removeSelected = (index) => {
+  selected.value.splice(index, 1)
+}
+
+const isEmptySelected = computed(() => selected.value.length === 0)
 </script>
 
-<style lang="scss" scoped>
 
+<style lang="scss" scoped>
+@import '../assets/scss/components/contact_form.scss';
 </style>
+

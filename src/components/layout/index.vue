@@ -10,8 +10,8 @@
 </template>
 
 <script setup>
-  import HeaderComponent from '../layout/header.vue'
-  import FooterComponent from '../layout/footer.vue'
+  import HeaderComponent from '../layout/header.vue';
+  import FooterComponent from '../layout/Footer.vue';
 
 </script>
 

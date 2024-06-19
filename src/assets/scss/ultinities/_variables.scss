@@ -44,5 +44,18 @@
   --swiper-pagination-bullet-inactive-color: #ffffff;
   --swiper-pagination-bullet-inactive-opacity: 1;
   --swiper-pagination-right: 40px;
-  --swiper-pagination-bullet-vertical-gap: 10px
+  --swiper-pagination-bullet-vertical-gap: 10px;
+
+  //form
+
+  --inputs-border-width: 1px;
+  --input-color-border: 238,238,238;
+  --inputs-radius: 5px;
+  --color-form-field: 255, 255, 255;
+  --color-form-field-text: 0, 0, 0 ;
+  --input-color-border-focus: 34, 34, 34;
+  --selected-item-bg: rgb(255, 165, 0);
+  --selected-item-color: rgb(255, 255, 255);
+  --selected-item-hover-bg:195, 195, 195;
+  --selected-radius: 5px;
 }
