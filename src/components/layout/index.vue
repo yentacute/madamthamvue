@@ -4,14 +4,14 @@
     <main>
         <slot></slot>
     </main>
-    <FooterComponent/>
+    <Footer/>
 
   </div>
 </template>
 
 <script setup>
-  import HeaderComponent from '../layout/header.vue';
-  import FooterComponent from '../layout/Footer.vue';
+  import HeaderComponent from './HeaderLayout.vue';
+  import Footer from './FooterLayout.vue';
 
 </script>
 
