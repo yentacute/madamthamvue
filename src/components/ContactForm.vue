@@ -77,15 +77,6 @@
             </div>
           </form>
         </div>
-
-        <!-- <div class="t-image-effect t-flex">
-          <div class="t-image-effect__first">
-            <img src="../assets/images/form/1.jpg" alt="" />
-          </div>
-          <div class="t-image-effect__second" style="--aspect-ratio: 4/6; --offset-top: 10%">
-            <img src="../assets/images/form/2.jpg" alt="" />
-          </div>
-        </div> -->
       </div>
     </div>
   </section>

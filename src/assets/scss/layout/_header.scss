@@ -9,10 +9,11 @@
   .t-menu {
     &__parent {
       position: relative;
-      font-weight: 600;
       padding: var(--t-link-py) var(--t-link-px);
       display: flex;
       align-items: center;
+      font-family: 'T-Font-Heading', sans-serif;
+      font-weight: 700;
     }
 
     &__title {
@@ -36,8 +37,6 @@
     }
 
     &__sub-menu-item {
-      font-weight: 500;
-
       &--has-child {
         &:hover {
           .t-menu__sub-child {

@@ -1,19 +1,20 @@
 .t-contact-form {
+  background-color: rgb(var(--t-footer-bg));
+  margin-top: var(--t-section-margin-top, 50px);
+  margin-bottom: var(--t-section-margin-bottom, 50px);
   .t-form {
     &__wrapper {
-      
     }
 
     &__title {
       margin-bottom: 40px;
     }
-
   }
-.form-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-}
+  .form-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
   .t-image-effect {
     position: relative;
     img {
@@ -26,7 +27,7 @@
     &__second {
       overflow: hidden;
       img {
-        transition: all .5s ease;
+        transition: all 0.5s ease;
       }
       &:hover {
         img {

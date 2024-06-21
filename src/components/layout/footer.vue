@@ -1,47 +1,77 @@
 <template>
-  <section class="t-footer">
+  <section class="t-footer section">
     <div class="container">
       <div class="t-footer__wrapper">
-        <div class="t-footer__content">
-          <div class="t-footer__block">
+        <div class="t-footer__content t-flex t-flex-wrap">
+          <div class="t-footer__block t-footer__block--info w-3-12 t-flex t-flex-column align-start justify-start">
             <div class="t-footer__logo">
               <img src="../../assets/images/logo.png" alt="logo">
             </div>
             <div class="t-footer__form">
-              <h3 class="h4">Đừng bỏ lỡ cơ hội</h3>
+              <h3 class="t-footer__menu-title h5">Đừng bỏ lỡ cơ hội</h3>
               <p>Theo dõi chúng tôi để biết thêm nhiều ưu đãi.</p>
-              <input type="email" placeholder="Email" class="form-field">
+              <EmailSubcribe/>
             </div>
           </div>
-
-          <div class="t-footer__block">
+          <div class="w-1-12"></div>
+          <div class="t-footer__block w-2-12">
             <div class="t-footer__menu">
-              <h3 class="h4">Menu</h3>
+              <h3 class="t-footer__menu-title h5">Dịch vụ</h3>
               <ul>
-                <li><a href="#">Trang chủ</a></li>
-                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Dọn dẹp nhà cửa</a></li>
+                <li><a href="#">Chăm sóc thú cưng</a></li>
                 <li><a href="#">Sản phẩm</a></li>
                 <li><a href="#">Liên hệ</a></li>
               </ul>
             </div>
           </div>
 
-          <div class="t-footer__block">
-            <div class="t-footer__contact">
-              <h3 class="h4">Liên hệ</h3>
+          <div class="t-footer__block w-2-12">
+            <div class="t-footer__menu">
+              <h3 class="t-footer__menu-title h5">Về chúng tôi</h3>
               <ul>
-                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Liên hệ</a></li>
+                <li><a href="#">Đội ngũ nhân viên</a></li>
+                <li><a href="#">Tin tức và sự kiện</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="t-footer__block w-2-12">
+            <div class="t-footer__menu">
+              <h3 class="t-footer__menu-title h5">Liên kết hữu ích</h3>
+              <ul>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Đối tác</a></li>
+                <li><a href="#">Tuyển dụng</a></li>
+                <li><a href="#">FAQ</a></li>
               </ul>
             </div>
           </div>
 
-          <div class="t-footer__copyright">
-            <p>© 2020 All rights reserved</p>
+          <div class="t-footer__block w-2-12">
+            <div class="t-footer__contact">
+              <h3 class="t-footer__menu-title h5">Liên hệ</h3>
+              <IconSocials
+                :wrapperClass="'t-flex align-center col-gap-12'"
+              />
+            </div>
           </div>
         </div>
+      </div>
+      <div class="t-footer__copyright t-flex justify-center align-center">
+        <p>© 2020 All rights reserved</p>
       </div>
     </div>
   </section>
 </template>
+
+<script setup>
+  import IconSocials from "../icons/IconSocials.vue";
+  import EmailSubcribe from "../EmailSubcribe.vue";
+
+</script>
+
+<style lang="scss" scoped>
+@import '../../assets/scss/layout/footer.scss';
+</style>

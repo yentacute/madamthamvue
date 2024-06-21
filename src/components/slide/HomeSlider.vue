@@ -17,19 +17,19 @@
         <swiper-slide v-for="(item, index) in props.slideItems" :key="index">
           <div class="t-slider__wrapper">
             <img :src="getImageUrl(item.image)" alt="" />
-            <div class="t-slider__content-container">
+            <div class="t-slider__content-container overlay">
               <div class="t-slider__content text-white">
                 <p class="t-subtitle t-slider__sub-title">
                   {{ item.subtitle }}
                 </p>
-                <h2>{{ item.title }}</h2>
+                <h2 class="h3">{{ item.title }}</h2>
                 <div class="t-slider__description">
                   <p>
                     {{ item.description }}
                   </p>
                 </div>
                 <div class="t-slider__btn mt-32">
-                  <a class="btn">Shop Now</a>
+                  <a class="btn">Xem chi tiết</a>
                 </div>
               </div>
             </div>
@@ -82,7 +82,7 @@ const props = defineProps({
     default: () => ({
       clickable: true,
       verticalClass: 'swiper-pagination-vertical',
-      type: 'bullets',
+      type: 'bullets'
     })
   },
   slideItems: {
@@ -98,17 +98,16 @@ const props = defineProps({
     default: 'fade'
   }
 })
-  const getImageUrl = (name) => {
-    return new URL(`../../assets/images/slider/${name}`, import.meta.url).href
-  }
-
+const getImageUrl = (name) => {
+  return new URL(`../../assets/images/slider/${name}`, import.meta.url).href
+}
 </script>
 
 <style lang="scss">
 .t-slider {
   width: 100%;
-    overflow: hidden;
-    height: 703px;
+  overflow: hidden;
+  height: 703px;
 
   .swiper-button-prev,
   .swiper-button-next {
@@ -155,10 +154,8 @@ const props = defineProps({
     justify-content: center;
     transition: all 0.8s;
     transform: translateY(0);
-
     h2 {
-      font-weight: 600;
-      line-height: 1.2;
+      font-family: 'T-Font-Regular', sans-serif;
       color: #ffffff;
     }
   }
@@ -168,6 +165,12 @@ const props = defineProps({
     p {
       margin-bottom: 0;
       line-height: 1.5;
+    }
+  }
+
+  &__btn {
+    .btn {
+      pointer-events: all;
     }
   }
 
@@ -181,6 +184,5 @@ const props = defineProps({
   //   --swiper-pagination-bullet-width: 20px;
   //   --swiper-pagination-bullet-height: 20px;
   // }
-
 }
 </style>

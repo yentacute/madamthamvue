@@ -1,24 +1,26 @@
 :root {
-  --t-btn-primary-bg: rgb(255, 165, 0);
+  --t-btn-primary-bg: rgb(205, 120, 62);
   --t-btn-secondary-bg: rgb(255, 255, 255);
   --t-duration-default: 0.25s;
   --t-btn-font-weight: 500;
   --t-btn-spacing: 0;
   --t-btn-text-transform: normal;
-  --t-btn-border-radius: 50px;
+  --t-btn-border-radius: 0;
   --t-btn-line-height: normal;
   --t-btn-font-size: #{rem(16)};
-  --t-btn-border-color: rgb(255, 165, 0);
+  --t-btn-border-color: rgb(205, 120, 62);
   --t-btn-primary-color: rgb(255, 255, 255);
   --t-btn-secondary-color: rgb(255, 98, 0);
   --t-btn-text-color-hover: rgb(255, 255, 255);
-  --t-btn-bg-hover: rgb(255, 98, 0);
-  --t-btn-border-color-hover: rgb(255, 98, 0);
+  --t-btn-bg-hover: rgb(205, 120, 62);
+  --t-btn-border-color-hover: rgb(205, 120, 62);
 
   // text color 
 
-  --t-text-color: rgb(102, 102, 102);
-  --t-heading-color: rgb(15,66,38);
+  --t-text-color: #222222;
+  --t-heading-color: #222222;
+  --t-subtitle-color: #cd783e;
+  --t-link-underline-color: #222;
   // link padding
   --t-link-py: #{rem(20)};
   --t-link-px: #{rem(16)};
@@ -32,12 +34,12 @@
   --heading-margin-bottom-desktop: 24px;
   --heading-margin-bottom-mobile: 12px;
 
-  --anouncementBg: rgb(218, 63, 63);
+  --anouncementBg: rgb(205, 120, 62);
   --anouncementColor: rgb(255, 255, 255);
 
   // swiper config 
 
-  --swiper-pagination-color: rgb(255, 165, 0);
+  --swiper-pagination-color: rgb(205, 120, 62);
   --swiper-pagination-bullet-size: 20px;
   --swiper-pagination-bullet-width: 10px;
   --swiper-pagination-bullet-height: 10px;
@@ -54,8 +56,21 @@
   --color-form-field: 255, 255, 255;
   --color-form-field-text: 0, 0, 0 ;
   --input-color-border-focus: 34, 34, 34;
-  --selected-item-bg: rgb(255, 165, 0);
+  --selected-item-bg: rgb(205, 120, 62);
   --selected-item-color: rgb(255, 255, 255);
   --selected-item-hover-bg:195, 195, 195;
   --selected-radius: 5px;
+
+  // footer 
+  --t-footer-bg:  251, 245, 239;
+  --t-menu-title-weight: 500;
+  --t-footer-color: 102, 102, 102;
+
+
+  //section
+
+  --t-section-margin-top: 50px;
+  --t-section-margin-bottom: 50px;
+  --t-section-padding-top: 50px;
+  --t-section-padding-bottom: 50px;
 }

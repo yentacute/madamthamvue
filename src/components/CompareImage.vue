@@ -1,5 +1,5 @@
 <template>
-  <section class="t-compare"
+  <section class="t-compare section"
     :style="buttonStyle"> 
     <div class="container">
       <div class="t-compare__container"  ref="compareEl" >
