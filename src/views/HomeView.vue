@@ -6,7 +6,7 @@
       :slide-per-view="4"
       :space-between="30"
     />
-    <Information>
+    <Information :classes="'md:t-flex-column'">
       <template v-slot:img>
         <img src="@/assets/images/readmore/1.jpeg" alt="">
       </template>

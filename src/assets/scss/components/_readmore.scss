@@ -1,0 +1,30 @@
+.t-information {
+  &__wrapper {
+    column-gap: var(--t-information-wrapper-column-gap, 60px);
+  }
+
+  &__button {
+    margin-top: var(--t-information-button-margin-top, 32px);
+  }
+  h2 {
+    max-width: 96%;
+  }
+
+  &__img {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+
+    // @include breakpoint-min('lg') {
+    //   width: 40%;
+    // }
+  }
+
+  &__content {
+    width: 100%;
+    // @include breakpoint-min('lg') {
+    //   width: 60%;
+    // }
+  }
+}

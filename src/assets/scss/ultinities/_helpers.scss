@@ -172,6 +172,54 @@
         @include justify-styles(between, space-between);
         @include justify-styles(evently, space-evently);
       }
+
+      
+    .t {
+      &-flex {
+        display: flex;
+      }
+
+      &-inline-flex {
+        display: inline-flex;
+      }
+
+      &-inline-block {
+        display: inline-block;
+      }
+
+      &-flex-row {
+        flex-direction: row;
+      }
+
+      &-flex-row-reverse {
+        flex-direction: row-reverse;
+      }
+
+      &-flex-column {
+        flex-direction: column;
+      }
+
+      &-flex-column-reverse {
+        flex-direction: column-reverse;
+      }
+
+      &-flex-wrap {
+        flex-wrap: wrap;
+      }
+
+      &-flex-nowrap {
+        flex-wrap: nowrap;
+      }
+
+      &-flex-wrap-reverse {
+        flex-wrap: wrap-reverse;
+      }
+
+      &-grid {
+        display: grid;
+      }
+    }
+
     }
 
     @include divide-value(w, width, 12);
@@ -287,4 +335,6 @@
   inset: 0;
   z-index: 1;
 }
+
+
 

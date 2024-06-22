@@ -19,16 +19,13 @@
             <li class="t-menu">
               <a href="" class="t-menu__parent t-link">Trang chủ</a>
             </li>
-            <li class="t-menu t-menu__has-sub"
-              @mouseover="handleHover"
-              @mouseout="handleCancelHover"
-            >
+            <li class="t-menu t-menu__has-sub">
               <a href="" class="t-menu__parent t-link">
                 <span class="t-menu__title">Dịch vụ</span>
-                <svg class="t-svg-icon--small" :class="{'visibility-hidden': !inActiveHover, 'visibility-visible': inActiveHover}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <svg class="t-svg-icon--small" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                   <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
                 </svg>  
-                <svg class="t-svg-icon--small" :class="{'visibility-visible': activeHover, 'visibility-hidden': !activeHover}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <svg class="t-svg-icon--small hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                   <path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"/>
                 </svg>
               </a>
@@ -57,16 +54,13 @@
                 </li>
               </ul>
             </li>
-            <li class="t-menu t-menu__has-sub"
-              @mouseover="handleHover"
-              @mouseout="handleCancelHover"
-            >
+            <li class="t-menu t-menu__has-sub">
               <a href="" class="t-menu__parent t-link">
                 <span class="t-menu__title">Shop</span>
-                <svg class="t-svg-icon--small" :class="{'visibility-hidden': !inActiveHover, 'visibility-visible': inActiveHover}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <svg class="t-svg-icon--small icon-up show"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                   <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
                 </svg>  
-                <svg class="t-svg-icon--small" :class="{'visibility-visible': activeHover, 'visibility-hidden': !activeHover}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <svg class="t-svg-icon--small icon-down hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                   <path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"/>
                 </svg>
               </a>
@@ -115,7 +109,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted, nextTick  } from 'vue'
 import SlideAnnouncement from '../slide/AnnouncementSlide.vue'
 import menu from '../../data/menu.json'
 import IconChevronRight from '../icons/IconChevronRight.vue'
@@ -151,4 +145,14 @@ const handleCancelHover = () => {
   activeHover.value = false;
   inActiveHover.value = true;
 }
+
+onMounted(() => {
+ nextTick();
+ const menuHasSub = document.querySelectorAll('.t-menu__has-sub');
+ menuHasSub.forEach(item => {
+   item.addEventListener('mouseenter', handleHover);
+   item.addEventListener('mouseleave', handleCancelHover);
+ })
+
+})
 </script>

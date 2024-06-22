@@ -8,6 +8,7 @@
         :modules="props.modules"
         :pagination="props.pagination"
         :autoplay="props.autoplay"
+        :breakpoints="props.breakpoints"
         loop
       >
         <swiper-slide v-for="(item, index) in data" :key="index">
@@ -118,55 +119,72 @@ const props = defineProps({
   effect: {
     type: String,
     default: 'fade'
+  },
+  breakpoints: {
+    type: Object,
+    default: () => ({
+      375: {
+        slidesPerView: 2
+      },
+      600: {
+        slidesPerView: 3
+      },
+      900: {
+        slidesPerView: 4
+      }
+    })
   }
 })
 
 </script>
 
 <style lang="scss">
-  .swiper-pagination-bullet {
-    --swiper-pagination-bullet-inactive-color: rgba(34, 34, 34, .3);
-    --swiper-pagination-bullet-size: 10px;
-  }
-  .swiper {
-    padding-bottom: 60px;
-  }
-  .swiper-button-prev,
-  .swiper-button-next {
-    --swiper-navigation-top-offset: 35%;
-    background-color: rgb(var(--t-btn-secondary-bg));
-    border-radius: 50px;
-    transition: all var(--t-duration-default, .25s) ease;
-    color: rgb(var(--t-btn-secondary-color));
-
-    &:hover {
-      background-color: rgb(var(--t-btn-bg-hover));
-      color: rgb(var(--t-btn-text-color-hover));
-    }
-
-  }
-
-  .swiper-button-prev {
-    transform: translate3d(-150%, 0 ,0);
-    opacity: 0;
-  }
-
-  .swiper-button-next {
-    transform: translate3d(150%, 0, 0);
-    opacity: 0;
-  }
-  .swiper-button-prev:after, .swiper-button-next:after {
-    --swiper-navigation-size: 13px;
-  }
-
-  .swiper {
-    transition: all var(--t-duration-default) ease;
-    &:hover {
+  .t-product-card__slider {
+    .swiper-pagination-bullet {
+        --swiper-pagination-bullet-inactive-color: rgba(34, 34, 34, .3);
+        --swiper-pagination-bullet-size: 10px;
+      }
+      .swiper {
+        padding-bottom: 60px;
+      }
       .swiper-button-prev,
       .swiper-button-next {
-        opacity: 1;
-        transform: translateX(0);
+        --swiper-navigation-top-offset: 35%;
+        background-color: rgb(var(--t-btn-secondary-bg));
+        border-radius: 50px;
+        transition: all var(--t-duration-default, .25s) ease;
+        color: rgb(var(--t-btn-secondary-color));
+
+        &:hover {
+          background-color: rgb(var(--t-btn-bg-hover));
+          color: rgb(var(--t-btn-text-color-hover));
+        }
+
       }
-    }
+
+      .swiper-button-prev {
+        transform: translate3d(-150%, 0 ,0);
+        opacity: 0;
+      }
+
+      .swiper-button-next {
+        transform: translate3d(150%, 0, 0);
+        opacity: 0;
+      }
+      .swiper-button-prev:after, .swiper-button-next:after {
+        --swiper-navigation-size: 13px;
+      }
+
+      .swiper {
+        transition: all var(--t-duration-default) ease;
+        &:hover {
+          .swiper-button-prev,
+          .swiper-button-next {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+      }
   }
+ 
 </style>
