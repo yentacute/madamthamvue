@@ -8,7 +8,7 @@
         </div>
 
         <div class="t-image-with-text__image">
-          <img class="image-full" src="../assets/images/image-with-text/4.webp" alt="" />
+          <img class="image-full" src="../assets/images/image-with-text/3.webp" alt="" />
         </div>
       </div>
     </div>

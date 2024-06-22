@@ -93,9 +93,9 @@ const props = defineProps({
   }
 
   .t-announcement {
-    background-color: var(--anouncementBg);
-    color: var(--anouncementColor);
-    --swiper-navigation-color: var(--anouncementColor);
+    background-color: rgb(var(--anouncementBg));
+    color: rgb(var(--anouncementColor));
+    --swiper-navigation-color: rgb(var(--anouncementColor));
     position: relative;
 
     &__content {

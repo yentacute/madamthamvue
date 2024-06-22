@@ -6,13 +6,13 @@
       <div class="t-compare__before t-compare--media">
       <p class="t-compare__heading h6">Before</p>
       <div class="t-compare__image-wrapper">
-        <img src="../assets/images/slider/4.jpg" alt="" />
+        <img src="../assets/images/slider/5.jpg" alt="" />
       </div>
     </div>
     <div class="t-compare__after t-compare--media">
       <p class="t-compare__heading h6">After</p>
       <div class="t-compare__image-wrapper">
-        <img src="../assets/images/slider/5.jpg" alt="" />
+        <img src="../assets/images/readmore/pet.jpg" alt="" />
       </div>
     </div>
 

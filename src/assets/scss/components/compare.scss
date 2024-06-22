@@ -60,8 +60,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: var(--t-btn-primary-bg);
-      color: var(--t-btn-primary-color);
+      background-color: rgb(var(--t-btn-primary-bg));
+      color: rgb(var(--t-btn-primary-color));
     }
     &::before {
       content: '';

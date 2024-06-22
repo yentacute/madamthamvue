@@ -1,17 +1,17 @@
 <template>
   <div class="t-wrapper">
-    <HeaderComponent/>
+    <HeaderLayout/>
     <main>
         <slot></slot>
     </main>
-    <Footer/>
+    <FooterLayout/>
 
   </div>
 </template>
 
 <script setup>
-  import HeaderComponent from './HeaderLayout.vue';
-  import Footer from './FooterLayout.vue';
+  import HeaderLayout from './HeaderLayout.vue';
+  import FooterLayout from './FooterLayout.vue';
 
 </script>
 

@@ -1,6 +1,6 @@
 :root {
-  --t-btn-primary-bg: rgb(205, 120, 62);
-  --t-btn-secondary-bg: rgb(255, 255, 255);
+  --t-btn-primary-bg: 205, 120, 62;
+  --t-btn-secondary-bg: 255, 255, 255;
   --t-duration-default: 0.25s;
   --t-btn-font-weight: 500;
   --t-btn-spacing: 0;
@@ -8,12 +8,12 @@
   --t-btn-border-radius: 0;
   --t-btn-line-height: normal;
   --t-btn-font-size: #{rem(16)};
-  --t-btn-border-color: rgb(205, 120, 62);
-  --t-btn-primary-color: rgb(255, 255, 255);
-  --t-btn-secondary-color: rgb(255, 98, 0);
-  --t-btn-text-color-hover: rgb(255, 255, 255);
-  --t-btn-bg-hover: rgb(205, 120, 62);
-  --t-btn-border-color-hover: rgb(205, 120, 62);
+  --t-btn-border-color: 205, 120, 62;
+  --t-btn-primary-color: 255, 255, 255;
+  --t-btn-secondary-color: 255, 98, 0;
+  --t-btn-text-color-hover: 255, 255, 255;
+  --t-btn-bg-hover: 205, 120, 62;
+  --t-btn-border-color-hover: 205, 120, 62;
 
   // text color 
 
@@ -27,15 +27,15 @@
 
   --t-logo-width-desktop: 100px;
   --t-logo-width-mobile: 110px;
-  --swiper-navigation-btn-size: 45px;
+  --swiper-navigation-btn-size: 40px;
   --swiper-navigation-color: var(--t-text-color);
   --t-black-color: #222;
   --t-white-color: #fff;
   --heading-margin-bottom-desktop: 24px;
   --heading-margin-bottom-mobile: 12px;
 
-  --anouncementBg: rgb(205, 120, 62);
-  --anouncementColor: rgb(255, 255, 255);
+  --anouncementBg: 205, 120, 62;
+  --anouncementColor: 255, 255, 255;
 
   // swiper config 
 
@@ -56,8 +56,8 @@
   --color-form-field: 255, 255, 255;
   --color-form-field-text: 0, 0, 0 ;
   --input-color-border-focus: 34, 34, 34;
-  --selected-item-bg: rgb(205, 120, 62);
-  --selected-item-color: rgb(255, 255, 255);
+  --selected-item-bg: 205, 120, 62;
+  --selected-item-color: 255, 255, 255;
   --selected-item-hover-bg:195, 195, 195;
   --selected-radius: 5px;
 

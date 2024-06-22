@@ -2,7 +2,10 @@
   <LayoutComponent>
     <HomeSlider :slide-items="slideData" :space-between="0" :autoplay="true" />
     <MultipleColumns />
-
+    <ProductSlider
+      :slide-per-view="4"
+      :space-between="30"
+    />
     <Information>
       <template v-slot:img>
         <img src="@/assets/images/readmore/1.jpeg" alt="">
@@ -38,10 +41,14 @@
           </div>
       </template>
     </Information>
-
+    <ProductSlider
+      :slide-per-view="4"
+      :space-between="30"
+    />
     <CompareImageVue />
-
+    
     <ImageWithText/>
+
     
   </LayoutComponent>
 </template>
@@ -55,7 +62,7 @@ import MultipleColumns from '../components/MultipleColumns.vue'
 import CompareImageVue from '@/components/CompareImage.vue'
 import ContactFormVue from '@/components/ContactForm.vue'
 import ImageWithText from '@/components/ImageWithText.vue'
-
+import ProductSlider from '@/components/ProductSlider.vue'
 </script>
 
 <style lang="scss" scoped>
