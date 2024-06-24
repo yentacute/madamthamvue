@@ -1,27 +1,37 @@
 <template>
   <div class="t-announcement" v-show="props.showAnnouncement">
     <div class="container h-100">
-        <swiper
-          :slides-per-view="props.slidePerView"
-          :space-between="props.spaceBetween"
-          :navigation="props.navigation"
-          :modules="props.modules"
-          :pagination="props.pagination"
-          :autoplay="props.autoplay"
-          loop
-        >
-            <swiper-slide v-for="(item, index) in props.slideItems"
-                          :key="index">
-              <div class="t-announcement__content t-flex justify-center align-center h-100 col-gap-10">
-                <div v-html="item.icon" class="icon"></div>
-                <h6>{{ item.title }}</h6>
-              </div>
-            </swiper-slide>
-        </swiper>
+      <swiper
+        :slides-per-view="props.slidePerView"
+        :space-between="props.spaceBetween"
+        :navigation="props.navigation"
+        :modules="props.modules"
+        :pagination="props.pagination"
+        :autoplay="props.autoplay"
+        loop
+      >
+        <swiper-slide v-for="(item, index) in props.slideItems" :key="index">
+          <div class="t-announcement__content flex justify-center align-center h-100 col-gap-10">
+            <div v-html="item.icon" class="icon"></div>
+            <h6>{{ item.title }}</h6>
+          </div>
+        </swiper-slide>
+      </swiper>
     </div>
     <div class="t-announcement__close" @click="handleClose">
-      <svg class="t-svg-icon--medium" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      <svg
+        class="t-svg-icon--medium"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M6 18L18 6M6 6l12 12"
+        ></path>
       </svg>
     </div>
   </div>
@@ -31,14 +41,14 @@
 import { defineProps, defineEmits } from 'vue'
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from 'swiper/vue'
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay  } from 'swiper/modules'
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules'
 
-import 'swiper/scss';
-import 'swiper/scss/autoplay';
+import 'swiper/scss'
+import 'swiper/scss/autoplay'
 const emit = defineEmits(['closeAnnouncement'])
 
 const handleClose = () => {
-  emit('closeAnnouncement', false);
+  emit('closeAnnouncement', false)
 }
 const props = defineProps({
   slidePerView: {
@@ -55,7 +65,7 @@ const props = defineProps({
   },
   modules: {
     type: Array,
-    default: () => [Navigation, Pagination, Scrollbar, A11y, Autoplay ]
+    default: () => [Navigation, Pagination, Scrollbar, A11y, Autoplay]
   },
   pagination: {
     type: Object,
@@ -70,7 +80,7 @@ const props = defineProps({
   autoplay: {
     type: Object,
     default: () => ({
-      delay: 3000, 
+      delay: 3000,
       disableOnInteraction: false
     })
   },
@@ -82,31 +92,31 @@ const props = defineProps({
 </script>
 
 <style lang="scss" scoped>
-  .container {
-    --container-width: 600px;
-  }
-  h6 {
-    --heading-margin-bottom-desktop: 0;
-    --heading-margin-bottom-mobile: 0;
-    font-weight: 500;
-    color: #fff;
+.container {
+  --container-width: 600px;
+}
+h6 {
+  --heading-margin-bottom-desktop: 0;
+  --heading-margin-bottom-mobile: 0;
+  font-weight: 500;
+  color: #fff;
+}
+
+.t-announcement {
+  background-color: rgb(var(--anouncementBg));
+  color: rgb(var(--anouncementColor));
+  --swiper-navigation-color: rgb(var(--anouncementColor));
+  position: relative;
+
+  &__content {
+    min-height: 40px;
   }
 
-  .t-announcement {
-    background-color: rgb(var(--anouncementBg));
-    color: rgb(var(--anouncementColor));
-    --swiper-navigation-color: rgb(var(--anouncementColor));
-    position: relative;
-
-    &__content {
-      min-height: 40px;
-    }
-
-    &__close {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      cursor: pointer;
-    }
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
   }
+}
 </style>

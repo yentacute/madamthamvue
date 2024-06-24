@@ -93,51 +93,55 @@
 
 /* flex */
 
-.t {
-  &-flex {
+  .flex {
     display: flex;
   }
 
-  &-inline-flex {
+  .inline-flex {
     display: inline-flex;
   }
 
-  &-inline-block {
+  .inline-block {
     display: inline-block;
   }
 
-  &-flex-row {
+  .flex-row {
     flex-direction: row;
   }
 
-  &-flex-row-reverse {
+  .flex-row-reverse {
     flex-direction: row-reverse;
   }
 
-  &-flex-column {
+  .flex-column {
     flex-direction: column;
   }
 
-  &-flex-column-reverse {
+  .flex-column-reverse {
     flex-direction: column-reverse;
   }
 
-  &-flex-wrap {
+  .flex-wrap {
     flex-wrap: wrap;
   }
 
-  &-flex-nowrap {
+  .flex-nowrap {
     flex-wrap: nowrap;
   }
 
-  &-flex-wrap-reverse {
+  .flex-wrap-reverse {
     flex-wrap: wrap-reverse;
   }
 
-  &-grid {
+  .grid {
     display: grid;
   }
-}
+
+  @for $i from 0 to 10 {
+    .grid-#{$i}-cols {
+      grid-template-columns: repeat(#{$i}, 1fr);
+    }
+  }
 /* variable $breakpoints-max get from breakpoints file */
 @each $prop, $value in $breakpoints-max {
   @include breakpoint-max($prop) {
@@ -174,53 +178,59 @@
       }
 
       
-    .t {
-      &-flex {
+      &flex {
         display: flex;
       }
 
-      &-inline-flex {
+      &inline-flex {
         display: inline-flex;
       }
 
-      &-inline-block {
+      &inline-block {
         display: inline-block;
       }
 
-      &-flex-row {
+      &flex-row {
         flex-direction: row;
       }
 
-      &-flex-row-reverse {
+      &flex-row-reverse {
         flex-direction: row-reverse;
       }
 
-      &-flex-column {
+      &flex-column {
         flex-direction: column;
       }
 
-      &-flex-column-reverse {
+      &flex-column-reverse {
         flex-direction: column-reverse;
       }
 
-      &-flex-wrap {
+      &flex-wrap {
         flex-wrap: wrap;
       }
 
-      &-flex-nowrap {
+      &flex-nowrap {
         flex-wrap: nowrap;
       }
 
-      &-flex-wrap-reverse {
+      &flex-wrap-reverse {
         flex-wrap: wrap-reverse;
       }
 
-      &-grid {
+      &grid {
         display: grid;
       }
-    }
+
+      
 
     }
+
+      @for $i from 0 to 10 {
+        .#{$prop}\:grid-#{$i}-cols {
+          grid-template-columns: repeat(#{$i}, 1fr);
+        }
+      }
 
     @include divide-value(w, width, 12);
     @include divide-value(h, height, 12);
@@ -300,15 +310,12 @@
 }
 
 .t\:column {
-  padding-left: calc(var(--column-gap, 0) / 2);
-  padding-right: calc(var(--column-gap, 0) / 2);
+  padding-left: calc(var(--column-gap-mobile, var(--column-gap))/2);
+  padding-right: calc(var(--column-gap-mobile, var(--column-gap))/2);
 }
 
-@for $i from 0 to 10 {
-  .grid-#{$i}-cols {
-    grid-template-columns: repeat(#{$i}, 1fr);
-  }
-}
+
+
 
 .overlay {
   position: absolute;
@@ -335,6 +342,4 @@
   inset: 0;
   z-index: 1;
 }
-
-
 

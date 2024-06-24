@@ -2,15 +2,17 @@
   <section class="t-footer section">
     <div class="container">
       <div class="t-footer__wrapper">
-        <div class="t-footer__content t-flex t-flex-wrap">
-          <div class="t-footer__block t-footer__block--info w-3-12 t-flex t-flex-column align-start justify-start">
+        <div class="t-footer__content flex flex-wrap">
+          <div
+            class="t-footer__block t-footer__block--info w-3-12 flex flex-column align-start justify-start"
+          >
             <div class="t-footer__logo">
-              <img src="../../assets/images/logo.png" alt="logo">
+              <img src="../../assets/images/logo.png" alt="logo" />
             </div>
             <div class="t-footer__form">
               <h3 class="t-footer__menu-title h5">Đừng bỏ lỡ cơ hội</h3>
               <p>Theo dõi chúng tôi để biết thêm nhiều ưu đãi.</p>
-              <EmailSubcribe/>
+              <EmailSubcribe />
             </div>
           </div>
           <div class="w-1-12"></div>
@@ -52,14 +54,12 @@
           <div class="t-footer__block w-2-12">
             <div class="t-footer__contact">
               <h3 class="t-footer__menu-title h5">Liên hệ</h3>
-              <IconSocials
-                :wrapperClass="'t-flex align-center col-gap-12'"
-              />
+              <IconSocials :wrapperClass="'flex align-center col-gap-12'" />
             </div>
           </div>
         </div>
       </div>
-      <div class="t-footer__copyright t-flex justify-center align-center">
+      <div class="t-footer__copyright flex justify-center align-center">
         <p>© 2020 All rights reserved</p>
       </div>
     </div>
@@ -67,9 +67,8 @@
 </template>
 
 <script setup>
-  import IconSocials from "../icons/IconSocials.vue";
-  import EmailSubcribe from "../EmailSubcribe.vue";
-
+import IconSocials from '../icons/IconSocials.vue'
+import EmailSubcribe from '../EmailSubcribe.vue'
 </script>
 
 <style lang="scss" scoped>

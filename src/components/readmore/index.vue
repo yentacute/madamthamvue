@@ -18,11 +18,12 @@ import { defineProps } from 'vue'
 const props = defineProps({
   classes: {
     type: String,
-    default: 't-flex align-center'
+    default: 'flex align-center'
   }
 })
 </script>
 
 <style lang="scss">
-  @import '@/assets/scss/components/_readmore.scss';
+@import '@/assets/scss/ultinities/breakpoints';
+@import '@/assets/scss/components/readmore.scss';
 </style>

@@ -34,7 +34,7 @@
               <div class="form-item">
                 <div class="form-selected">
                   <div
-                    class="form-selected__title t-flex align-center justify-between"
+                    class="form-selected__title flex align-center justify-between"
                     v-if="isEmptySelected"
                     @click="handleShowSelect"
                   >
@@ -65,14 +65,14 @@
                 </div>
               </div>
             </div>
-             <div class="form-item">
-                <textarea
-                  placeholder="Ghi chú chi tiết tại đây..."
-                  class="form-field"
-                  rows="5"
-                ></textarea>
-              </div>
-            <div class="form-item t-flex justify-center">
+            <div class="form-item">
+              <textarea
+                placeholder="Ghi chú chi tiết tại đây..."
+                class="form-field"
+                rows="5"
+              ></textarea>
+            </div>
+            <div class="form-item flex justify-center">
               <button type="submit">Đặt lịch</button>
             </div>
           </form>

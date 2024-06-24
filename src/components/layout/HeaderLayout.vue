@@ -1,42 +1,58 @@
 <template>
   <header class="t-header">
-    <SlideAnnouncement 
-      :slide-items="announcements" 
+    <SlideAnnouncement
+      :slide-items="announcements"
       :pagination="false"
       :space-between="0"
       @closeAnnouncement="handleClose"
-      :showAnnouncement = showAnnouncement
-       />
+      :showAnnouncement="showAnnouncement"
+    />
     <div class="container">
-      <div class="t-header__wrapper t-flex align-center">
-        <div class="t-header__logo w-2-12 t-flex justify-start">
+      <div class="t-header__wrapper flex align-center">
+        <div class="t-header__logo w-2-12 flex justify-start">
           <a href="">
             <img src="../../assets/images/logo.png" alt="" />
           </a>
         </div>
-        <div class="t-header__menu w-8-12 t-flex justify-center">
-          <ul class="t-menu__list t-flex">
+        <div class="t-header__menu w-8-12 flex justify-center">
+          <ul class="t-menu__list flex">
             <li class="t-menu">
               <a href="" class="t-menu__parent t-link">Trang chủ</a>
             </li>
             <li class="t-menu t-menu__has-sub">
               <a href="" class="t-menu__parent t-link">
                 <span class="t-menu__title">Dịch vụ</span>
-                <svg class="t-svg-icon--small" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                  <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
-                </svg>  
-                <svg class="t-svg-icon--small hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                  <path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"/>
+                <svg
+                  class="t-svg-icon--small"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                  />
+                </svg>
+                <svg
+                  class="t-svg-icon--small hidden"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+                  />
                 </svg>
               </a>
               <ul class="t-menu__sub-menu">
                 <li class="t-menu__sub-menu-item t-menu__sub-menu-item--has-child">
                   <a class="t-menu__sub-title" href="">
                     <span>{{ menu.HomeCleanServices.title }}</span>
-                    <IconChevronRight/>
+                    <IconChevronRight />
                   </a>
                   <ul class="t-menu__sub-child">
-                    <li v-for="(item, index) in menu.HomeCleanServices.submenus" :key="index" class="t-menu__sub-child-item" >
+                    <li
+                      v-for="(item, index) in menu.HomeCleanServices.submenus"
+                      :key="index"
+                      class="t-menu__sub-child-item"
+                    >
                       <a href="">{{ item.title }}</a>
                     </li>
                   </ul>
@@ -44,10 +60,14 @@
                 <li class="t-menu__sub-menu-item t-menu__sub-menu-item--has-child">
                   <a class="t-menu__sub-title" href="">
                     <span>{{ menu.PetCareServices.title }}</span>
-                    <IconChevronRight/>
+                    <IconChevronRight />
                   </a>
                   <ul class="t-menu__sub-child">
-                    <li v-for="(item, index) in menu.PetCareServices.submenus" :key="index" class="t-menu__sub-child-item" >
+                    <li
+                      v-for="(item, index) in menu.PetCareServices.submenus"
+                      :key="index"
+                      class="t-menu__sub-child-item"
+                    >
                       <a href="">{{ item.title }}</a>
                     </li>
                   </ul>
@@ -57,11 +77,23 @@
             <li class="t-menu t-menu__has-sub">
               <a href="" class="t-menu__parent t-link">
                 <span class="t-menu__title">Shop</span>
-                <svg class="t-svg-icon--small icon-up show"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                  <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
-                </svg>  
-                <svg class="t-svg-icon--small icon-down hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                  <path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"/>
+                <svg
+                  class="t-svg-icon--small icon-up show"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                  />
+                </svg>
+                <svg
+                  class="t-svg-icon--small icon-down hidden"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+                  />
                 </svg>
               </a>
               <ul class="t-menu__sub-menu">
@@ -79,7 +111,7 @@
           </ul>
         </div>
 
-        <div class="t-header__right w-2-12 t-flex justify-end">
+        <div class="t-header__right w-2-12 flex justify-end">
           <a href="">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -109,7 +141,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, nextTick  } from 'vue'
+import { ref, onMounted, nextTick } from 'vue'
 import SlideAnnouncement from '../slide/AnnouncementSlide.vue'
 import menu from '../../data/menu.json'
 import IconChevronRight from '../icons/IconChevronRight.vue'
@@ -128,31 +160,30 @@ const announcements = ref([
   }
 ])
 
-const showAnnouncement = ref(true);
-const activeHover = ref(false);
-const inActiveHover = ref(true);
+const showAnnouncement = ref(true)
+const activeHover = ref(false)
+const inActiveHover = ref(true)
 
 const handleClose = (value) => {
-  showAnnouncement.value = value;
+  showAnnouncement.value = value
 }
 
 const handleHover = () => {
-  activeHover.value = true;
-  inActiveHover.value = false;
+  activeHover.value = true
+  inActiveHover.value = false
 }
 
 const handleCancelHover = () => {
-  activeHover.value = false;
-  inActiveHover.value = true;
+  activeHover.value = false
+  inActiveHover.value = true
 }
 
 onMounted(() => {
- nextTick();
- const menuHasSub = document.querySelectorAll('.t-menu__has-sub');
- menuHasSub.forEach(item => {
-   item.addEventListener('mouseenter', handleHover);
-   item.addEventListener('mouseleave', handleCancelHover);
- })
-
+  nextTick()
+  const menuHasSub = document.querySelectorAll('.t-menu__has-sub')
+  menuHasSub.forEach((item) => {
+    item.addEventListener('mouseenter', handleHover)
+    item.addEventListener('mouseleave', handleCancelHover)
+  })
 })
 </script>

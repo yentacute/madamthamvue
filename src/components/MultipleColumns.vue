@@ -2,44 +2,46 @@
   <section class="section t-multiple-cols">
     <div class="container">
       <div class="t-multiple__wrapper">
-        <div class="t-grid grid-3-cols"
-          style="--column-gap: 30px;">
-          <div class="t:column">
-              <div class="t-icon-box__inner t-flex t-flex-column justify-center align-center row-gap-24">
-                <div class="t-icon-box__img">
-                  <img src="@/assets/images/icons/time.png" alt="">
-                </div>
-                <div class="t-icon-box__content text-center">
-                  <h3 class="h5">Tiết Kiệm Thời Gian</h3>
-                  <div class="t-icon-box__description">
-                    <p>Thay vì dành thời gian dọn dẹp, bạn có thể tập trung vào những công việc quan trọng khác.</p>
-                  </div>
-                </div>
+        <div class="grid md:grid-2-cols grid-3-cols " style="--column-gap: 48px; --column-gap-mobile: 30px">
+          <div class="t:column t-icon-box__inner flex flex-column justify-center align-center row-gap-24">
+            <div class="t-icon-box__img">
+              <img src="@/assets/images/icons/time.png" alt="" />
+            </div>
+            <div class="t-icon-box__content text-center">
+              <h3 class="h5">Tiết Kiệm Thời Gian</h3>
+              <div class="t-icon-box__description">
+                <p>
+                  Thay vì dành thời gian dọn dẹp, bạn có thể tập trung vào những công việc quan
+                  trọng khác.
+                </p>
               </div>
-          </div>
-          <div class="t:column">
-              <div class="t-icon-box__inner t-flex t-flex-column justify-center align-center  row-gap-24">
-                <div class="t-icon-box__img">
-                  <img src="@/assets/images/icons/save-money.png" alt="">
-                </div>
-                <div class="t-icon-box__content text-center">
-                  <h3 class="h5">Gói Dịch Vụ Ưu Đãi</h3>
-                  <div class="t-icon-box__description">
-                    <p>Nhiều công ty cung cấp các gói dịch vụ dài hạn với mức giá hấp dẫn, giúp bạn tiết kiệm hơn.</p>
-                  </div>
-                </div>
             </div>
           </div>
-          <div class="t:column">
-              <div class="t-icon-box__inner t-flex t-flex-column justify-center align-center  row-gap-24">
-                <div class="t-icon-box__img">
-                  <img src="@/assets/images/icons/fast.png" alt="">
-                </div>
-                <div class="t-icon-box__content text-center">
-                  <h3 class="h5">Nâng Cao Chất Lượng Cuộc Sống</h3>
-                  <div class="t-icon-box__description">
-                    <p>Nâng cao chất lượng cuộc sống hàng ngày mà còn tạo môi trường tràn đầy năng lượng.</p>
-                  </div>
+          <div class="t:column t-icon-box__inner flex flex-column justify-center align-center row-gap-24">
+            <div class="t-icon-box__img">
+              <img src="@/assets/images/icons/save-money.png" alt="" />
+            </div>
+            <div class="t-icon-box__content text-center">
+              <h3 class="h5">Gói Dịch Vụ Ưu Đãi</h3>
+              <div class="t-icon-box__description">
+                <p>
+                  Nhiều công ty cung cấp các gói dịch vụ dài hạn với mức giá hấp dẫn, giúp bạn
+                  tiết kiệm hơn.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="t:column t-icon-box__inner flex flex-column justify-center align-center row-gap-24">
+            <div class="t-icon-box__img">
+              <img src="@/assets/images/icons/fast.png" alt="" />
+            </div>
+            <div class="t-icon-box__content text-center">
+              <h3 class="h5">Nâng Cao Chất Lượng Cuộc Sống</h3>
+              <div class="t-icon-box__description">
+                <p>
+                  Nâng cao chất lượng cuộc sống hàng ngày mà còn tạo môi trường tràn đầy năng
+                  lượng.
+                </p>
               </div>
             </div>
           </div>
@@ -50,11 +52,10 @@
 </template>
 
 <script setup>
-
 </script>
 
 <style lang="scss" scoped>
- @keyframes tZoomEffect {
+@keyframes tZoomEffect {
   0% {
     opacity: 0.8;
     transform: scale(1.1);
@@ -82,7 +83,6 @@
 
       img {
         width: 100%;
-        height: 100%;
       }
     }
   }
@@ -90,5 +90,4 @@
     --heading-margin-bottom-desktop: 12px;
   }
 }
-
 </style>

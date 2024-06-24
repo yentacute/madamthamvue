@@ -1,7 +1,8 @@
 
-@use 'ultinities/breakpoints' as *;
 
 @use 'ultinities/functions' as *;
+
+@import 'ultinities/breakpoints';
 
 @import 'layout/header';
 @import 'layout/footer';

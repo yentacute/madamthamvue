@@ -20,7 +20,7 @@ import { defineProps } from 'vue'
 const props = defineProps({
   classes: {
     type: String,
-    default: 't-flex t-flex-column'
+    default: 'flex flex-column'
   },
 
   container: {
@@ -29,7 +29,7 @@ const props = defineProps({
   },
   classAlign: {
     type: String,
-    default: 't-flex t-flex-column justify-center align-center text-center'
+    default: 'flex flex-column justify-center align-center text-center'
   }
 })
 </script>

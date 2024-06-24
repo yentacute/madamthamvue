@@ -1,10 +1,16 @@
 .t-information {
   &__wrapper {
+    --heading-margin-bottom-mobile: 16px;
     column-gap: var(--t-information-wrapper-column-gap, 60px);
+    row-gap: 24px;
+
   }
 
   &__button {
     margin-top: var(--t-information-button-margin-top, 32px);
+    @include breakpoint-max('md'){
+      --t-information-button-margin-top: 24px;
+    }
   }
   h2 {
     max-width: 96%;

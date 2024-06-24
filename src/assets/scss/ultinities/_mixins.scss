@@ -13,6 +13,7 @@
       #{$property}: #{$i}#{$unit};
     }
   }
+
 }
 
 @mixin divide-value($name, $property, $total) {
