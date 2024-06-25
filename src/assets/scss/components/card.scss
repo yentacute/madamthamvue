@@ -63,10 +63,16 @@
     right: 20px;
     transition: all var(--t-duration-default, .25s) ease;
     z-index: 10;
+
     @include breakpoint-min(lg) {
       transform: translate3d(0, 150%, 0);
       opacity: 0;
     }
+
+    @include breakpoint-min(md) {
+      display: none;
+    }
+
     .btn-atc {
       width: 100%;
 
