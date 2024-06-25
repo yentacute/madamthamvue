@@ -15,7 +15,7 @@
               <EmailSubcribe />
             </div>
           </div>
-          <div class="w-0 w-1-12"></div>
+          <div class="md:w-0 w-1-12"></div>
           <div class="t-footer__block md:w-100 w-2-12">
             <div class="t-footer__menu">
               <h3 class="t-footer__menu-title h5">Dịch vụ</h3>
