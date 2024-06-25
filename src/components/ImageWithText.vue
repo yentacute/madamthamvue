@@ -45,7 +45,7 @@ const props = defineProps({
 
   .t-link {
     font-family: 'T-Font-Heading', sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     color: var(--t-subtitle-color);
     --t-link-underline-color: var(--t-subtitle-color);
     font-size: 18px;
