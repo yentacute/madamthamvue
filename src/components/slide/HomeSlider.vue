@@ -104,10 +104,19 @@ const getImageUrl = (name) => {
 </script>
 
 <style lang="scss">
+@import '@/assets/scss/ultinities/breakpoints';
 .t-slider {
   width: 100%;
   overflow: hidden;
-  height: 703px;
+  height: 600px;
+  @include breakpoint-min(md) {
+    height: 703px;
+  }
+
+  @include breakpoint-max(md) {
+  --swiper-pagination-right: 24px;
+
+  }
 
   .swiper-button-prev,
   .swiper-button-next {
@@ -139,10 +148,13 @@ const getImageUrl = (name) => {
     position: absolute;
     left: 0;
     top: 0;
-    padding: 100px 65px;
+    padding: 60px 24px;
     display: flex;
     justify-content: flex-start;
     z-index: 99;
+    @include breakpoint-min(md) {
+      padding: 100px 65px;
+    }
   }
 
   &__content {

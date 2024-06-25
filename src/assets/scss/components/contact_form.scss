@@ -1,9 +1,10 @@
 .t-contact-form {
   background-color: rgb(var(--t-footer-bg));
-  margin-top: var(--t-section-margin-top, 50px);
-  margin-bottom: var(--t-section-margin-bottom, 50px);
   .t-form {
     &__wrapper {
+      button {
+        margin-top: 24px;
+      }
     }
 
     &__title {

@@ -37,7 +37,6 @@
           <label
             class="t-card__product--node__label"
             style="background: rgb(225, 211, 188)"
-            v-tooltip="'Cream'"
           ></label>
         </div>
         <div class="t-card__product-watch">

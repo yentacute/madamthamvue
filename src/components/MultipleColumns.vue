@@ -2,7 +2,7 @@
   <section class="section t-multiple-cols">
     <div class="container">
       <div class="t-multiple__wrapper">
-        <div class="grid md:grid-2-cols grid-3-cols " style="--column-gap: 48px; --column-gap-mobile: 30px">
+        <div class="grid grid-3-cols  md:grid-2-cols md:row-gap-30" style="--column-gap: 48px; --column-gap-mobile: 30px">
           <div class="t:column t-icon-box__inner flex flex-column justify-center align-center row-gap-24">
             <div class="t-icon-box__img">
               <img src="@/assets/images/icons/time.png" alt="" />
@@ -52,6 +52,7 @@
 </template>
 
 <script setup>
+
 </script>
 
 <style lang="scss" scoped>

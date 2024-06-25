@@ -1,5 +1,5 @@
 <template>
-  <section class="section t-contact-form">
+  <section class="section section-margin t-contact-form">
     <div class="container">
       <div class="t-form__wrapper">
         <div class="t-form__title">

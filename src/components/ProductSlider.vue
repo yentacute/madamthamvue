@@ -124,7 +124,8 @@ const props = defineProps({
     type: Object,
     default: () => ({
       375: {
-        slidesPerView: 2
+        slidesPerView: 2,
+        spaceBetween: 15
       },
       600: {
         slidesPerView: 3
@@ -139,13 +140,19 @@ const props = defineProps({
 </script>
 
 <style lang="scss">
+  @import '../assets/scss/ultinities/_breakpoints.scss';
   .t-product-card__slider {
     .swiper-pagination-bullet {
         --swiper-pagination-bullet-inactive-color: rgba(34, 34, 34, .3);
         --swiper-pagination-bullet-size: 10px;
       }
       .swiper {
-        padding-bottom: 60px;
+        padding-bottom: 48px;
+
+        @include breakpoint-min(lg) {
+          padding-bottom: 60px;
+        }
+
       }
       .swiper-button-prev,
       .swiper-button-next {

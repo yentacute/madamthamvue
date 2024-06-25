@@ -2,9 +2,9 @@
   <section class="t-footer section">
     <div class="container">
       <div class="t-footer__wrapper">
-        <div class="t-footer__content flex flex-wrap">
+        <div class="t-footer__content flex md:flex-column  flex-wrap md:row-gap-24">
           <div
-            class="t-footer__block t-footer__block--info w-3-12 flex flex-column align-start justify-start"
+            class="t-footer__block t-footer__block--info md:w-100 w-3-12  flex flex-column align-start justify-start"
           >
             <div class="t-footer__logo">
               <img src="../../assets/images/logo.png" alt="logo" />
@@ -15,8 +15,8 @@
               <EmailSubcribe />
             </div>
           </div>
-          <div class="w-1-12"></div>
-          <div class="t-footer__block w-2-12">
+          <div class="w-0 w-1-12"></div>
+          <div class="t-footer__block md:w-100 w-2-12">
             <div class="t-footer__menu">
               <h3 class="t-footer__menu-title h5">Dịch vụ</h3>
               <ul>
@@ -28,7 +28,7 @@
             </div>
           </div>
 
-          <div class="t-footer__block w-2-12">
+          <div class="t-footer__block md:w-100 w-2-12">
             <div class="t-footer__menu">
               <h3 class="t-footer__menu-title h5">Về chúng tôi</h3>
               <ul>
@@ -39,7 +39,7 @@
               </ul>
             </div>
           </div>
-          <div class="t-footer__block w-2-12">
+          <div class="t-footer__block md:w-100 w-2-12">
             <div class="t-footer__menu">
               <h3 class="t-footer__menu-title h5">Liên kết hữu ích</h3>
               <ul>
@@ -51,7 +51,7 @@
             </div>
           </div>
 
-          <div class="t-footer__block w-2-12">
+          <div class="t-footer__block md:w-100 w-2-12">
             <div class="t-footer__contact">
               <h3 class="t-footer__menu-title h5">Liên hệ</h3>
               <IconSocials :wrapperClass="'flex align-center col-gap-12'" />

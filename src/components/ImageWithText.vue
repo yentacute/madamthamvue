@@ -1,7 +1,7 @@
 <template>
   <section class="t-image-with-text section">
     <div :class="props.container">
-      <div class="t-image-with-text__wrapper col-gap-60 row-gap-60" :class="props.classes">
+      <div class="t-image-with-text__wrapper  md:row-gap-24 col-gap-60 row-gap-60" :class="props.classes">
         <div class="t-image-with-text__content" :class="props.classAlign">
           <h2 class="h3">Sống tươi đẹp, chăm sóc từng góc nhỏ của nhà.</h2>
           <a href="" class="t-link">Xem chi tiết</a>
@@ -52,8 +52,7 @@ const props = defineProps({
   }
 
   &__image {
-    max-height: 700px;
-    min-height: 700px;
+    min-height: 600px;
     position: relative;
   }
 }

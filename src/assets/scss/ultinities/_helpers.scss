@@ -18,6 +18,23 @@
     justify-content: $value;
   }
 }
+@include set-value(animation-delay, animation-delay, 30, 's');
+@include set-value(animation-duration, animation-duration, 30, 's');
+@include set-value(col-gap, column-gap, 200, 'px');
+@include set-value(row-gap, row-gap, 200, 'px');
+@include set-value(gap, gap, 200, 'px');
+
+/* set width width 12 col */
+
+@include divide-value(w, width, 12);
+@include divide-value(h, height, 12);
+/* width  */
+
+@include set-value(w, width, 100, '%');
+
+/* height */
+
+@include set-value(h, height, 100, '%');
 
 .text {
   @include text-styles(left, text-align, left);
@@ -232,26 +249,28 @@
         }
       }
 
-    @include divide-value(w, width, 12);
-    @include divide-value(h, height, 12);
+      @for $i from 0 to 200 {
+        .#{$prop}\:row-gap-#{$i} {
+          row-gap: #{$i}px;
+        }
+        .#{$prop}\:column-gap-#{$i} {
+          column-gap: #{$i}px;
+        }
+      }
+
+
+    @for $i from 1 through 100 {
+      .#{$prop}\:w-#{$i} {
+        width: #{$i}#{'%'};
+       }
+    }
   }
 }
 
-/* width  */
-
-@include set-value(w, width, 100, '%');
-
-/* height */
-
-@include set-value(h, height, 100, '%');
 
 /* animation */
 
-@include set-value(animation-delay, animation-delay, 30, 's');
-@include set-value(animation-duration, animation-duration, 30, 's');
-@include set-value(col-gap, column-gap, 200, 'px');
-@include set-value(row-gap, row-gap, 200, 'px');
-@include set-value(gap, gap, 200, 'px');
+
 
 /* section padding */
 
@@ -260,15 +279,12 @@
   padding-bottom: var(--t-section-padding-bottom, 50px);
 
   @include breakpoint-max(md) {
-    padding-top: var(--t-section-padding-top-md, 16px);
-    padding-bottom: var(--t-section-padding-bottom-md, 16px);
+    padding-top: var(--t-section-padding-top-md, 32px);
+    padding-bottom: var(--t-section-padding-bottom-md, 32px);
   }
 }
 
-/* set width width 12 col */
 
-@include divide-value(w, width, 12);
-@include divide-value(h, height, 12);
 
 /* text color */
 
@@ -343,3 +359,11 @@
   z-index: 1;
 }
 
+.section-margin {
+  margin-top: var(--t-section-margin-top, 50px);
+  margin-bottom: var(--t-section-margin-bottom, 50px);
+  @include breakpoint-max(md) {
+    margin-top: var(--t-section-margin-top-mobile, 32px);
+    margin-bottom: var(--t-section-margin-bottom-mobile, 32px);
+  }
+}

@@ -1,3 +1,4 @@
+@import '../ultinities/breakpoints';
 .t-footer {
   background-color: rgb(var(--t-footer-bg));
   color: rgb(var(--t-footer-color));
@@ -38,6 +39,9 @@
 
   &__wrapper {
     margin-bottom: 80px;
+    @include breakpoint-max(md) {
+      margin-bottom: 40px;
+    }
     p {
       margin-bottom: 0;
     }

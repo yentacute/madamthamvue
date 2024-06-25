@@ -1,14 +1,16 @@
+@use '../ultinities/breakpoints' as *;
 .t-compare {
   &__container {
     position: relative;
-    height: 500px;
+    height: 300px;
     overflow: hidden;
     -webkit-user-select:none;
     -moz-user-select:none;
     user-select:none;
-  }
 
-  &__before {
+    @include breakpoint-min(lg) {
+      height: 500px;
+    }
   }
 
   &__after {
