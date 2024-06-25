@@ -32,8 +32,7 @@ $h6-mobile-font-size: #{rem(14)};
 
 @font-face {
   font-family: 'T-Font-Heading';
-  src: url('@/assets/fonts/Poppins/Poppins-SemiBold.ttf') format('woff');
-  font-weight: normal;
+  src: url('@/assets/fonts/Open_Sans/static/OpenSans-SemiBold.ttf') format('woff');
   font-style: normal;
   font-display: swap;
 }
@@ -53,7 +52,6 @@ h6,
   margin-top: 0;
   color: var(--t-heading-color);
   font-family: 'T-Font-Heading', sans-serif;
-  font-weight: 600;
 }
 h1,
 .h1 {
