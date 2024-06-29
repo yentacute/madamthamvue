@@ -13,8 +13,12 @@
   }
   .form-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px 30px;
+    grid-template-columns: 1fr;
+    row-gap: 8px;
+    @include breakpoint-min(md) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px 30px;
+    }
   }
   .t-image-effect {
     position: relative;

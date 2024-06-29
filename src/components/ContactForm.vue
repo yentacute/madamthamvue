@@ -118,6 +118,7 @@ const isEmptySelected = computed(() => selected.value.length === 0)
 
 
 <style lang="scss" scoped>
+@import '../assets/scss/ultinities/_breakpoints.scss';
 @import '../assets/scss/components/contact_form.scss';
 </style>
 
