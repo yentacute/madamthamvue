@@ -85,8 +85,8 @@ const handleCompareMove = (event) => {
 }
 
 // Thêm sự kiện khởi động
-document.addEventListener('mousedown', handleCompareStart)
-document.addEventListener('touchstart', handleCompareStart) // Bắt đầu sự kiện kéo trên cảm ứng
+compareEl.value.addEventListener('mousedown', handleCompareStart)
+compareEl.value.addEventListener('touchstart', handleCompareStart) // Bắt đầu sự kiện kéo trên cảm ứng
 </script>
 
 <style lang="scss" scoped>
