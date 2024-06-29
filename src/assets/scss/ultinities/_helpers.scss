@@ -329,6 +329,9 @@
   font-weight: 500;
   margin-bottom: var(--t-subtitle-bottom-spacing, 18px);
   letter-spacing: normal;
+  @include breakpoint-max(md) {
+    margin-bottom: var(--t-subtitle-bottom-spacing-mobie, 8px);
+  }
 }
 
 .t\:column {

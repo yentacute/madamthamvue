@@ -52,19 +52,21 @@
     '--percentage': `${percentage.value}%`
   }));
 
-  const handleCompareStart = (event) => {
-    console.log(event, 'start');
+  const handleCompareStart = () => {
     isDragging = true;
     document.addEventListener('mousemove', handleCompareMove);
     document.addEventListener('mouseup', handleCompareEnd);
+    document.addEventListener('touchstart', handleCompareMove);
+    document.addEventListener('touchend', handleCompareEnd);
 
   }
 
-  const handleCompareEnd = (event) => {
-    console.log(event, 'end');
+  const handleCompareEnd = () => {
     isDragging = false;
     document.removeEventListener('mousemove', handleCompareMove);
     document.removeEventListener('mouseup', handleCompareEnd);
+    document.removeEventListener('touchstart', handleCompareMove);
+    document.removeEventListener('touchend', handleCompareEnd);
   }
 
   const handleCompareMove = (event) => {
@@ -80,9 +82,6 @@
 
   }
 
-  document.addEventListener('scroll', (event) => {
-    console.log('event');
-  });
 </script>
 
 <style lang="scss" scoped>
