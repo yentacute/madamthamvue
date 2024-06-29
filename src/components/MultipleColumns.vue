@@ -2,21 +2,7 @@
   <section class="section t-multiple-cols">
     <div class="container">
       <div class="t-multiple__wrapper">
-        <div class="grid grid-4-cols  md:grid-2-cols md:row-gap-30" style="--column-gap: 48px; --column-gap-mobile: 30px">
-          <div class="t:column t-icon-box__inner flex flex-column justify-center align-center row-gap-24">
-            <div class="t-icon-box__img">
-              <img src="@/assets/images/icons/time.png" alt="" />
-            </div>
-            <div class="t-icon-box__content text-center">
-              <h3 class="h5">Tiết Kiệm Thời Gian</h3>
-              <div class="t-icon-box__description">
-                <p>
-                  Thay vì dành thời gian dọn dẹp, bạn có thể tập trung vào những công việc quan
-                  trọng khác.
-                </p>
-              </div>
-            </div>
-          </div>
+        <div class="grid grid-3-cols  md:grid-1-cols md:row-gap-30" style="--column-gap: 48px; --column-gap-mobile: 30px">
           <div class="t:column t-icon-box__inner flex flex-column justify-center align-center row-gap-24">
             <div class="t-icon-box__img">
               <img src="@/assets/images/icons/time.png" alt="" />
