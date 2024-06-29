@@ -310,7 +310,7 @@ const handleCancelHover = () => {
 const handleToggleMenu = (event) => {
   event.preventDefault();
   showMenu.value =!showMenu.value;
-  document.documentElement.style.overflow = showMenu.value? 'hidden' : 'auto';
+  document.documentElement.style.overflow = showMenu.value? 'clip' : 'auto';
 }
 
 const handleCloseMenu = () => {

@@ -63,3 +63,9 @@ svg {
   --swiper-navigation-size: 15px;
   margin-top: calc(0px - (var(--swiper-navigation-btn-height) / 2));
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
