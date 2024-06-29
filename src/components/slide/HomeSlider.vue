@@ -10,7 +10,7 @@
         :autoplay="props.autoplay"
         :effect="'fade'"
         :parallax="true"
-        :direction="'vertical'"
+        :breakpoints="props.breakpoints"
         loop
         class="h-100"
       >
@@ -96,6 +96,17 @@ const props = defineProps({
   effect: {
     type: String,
     default: 'fade'
+  },
+  breakpoints: {
+    type: Object,
+    default: () => ({
+      640: {
+        direction:'horizontal'
+      },
+      768: {
+        direction:'vertical'
+      }
+    })
   }
 })
 const getImageUrl = (name) => {

@@ -59,6 +59,7 @@ const props = defineProps({
 const getImageUrl = (name) => {
   return new URL(`../assets/images/product/1/${name}`, import.meta.url).href
 }
+
 </script>
 
 <style lang="scss" scoped>

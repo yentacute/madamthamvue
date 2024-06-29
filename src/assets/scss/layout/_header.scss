@@ -4,6 +4,50 @@
   -moz-box-shadow: 0px 4px 5px -1px rgba(237, 230, 230, 0.29);
   &__wrapper {
     padding: #{rem(8)} 0;
+    &--desktop {
+      @include breakpoint-max(lg) {
+        display: none !important;
+       }
+    }
+    &--mobile {
+      display: block;
+      @include breakpoint-min(lg) {
+        display: none !important;
+      }
+      .t-header__menu {
+       position: fixed;
+       top: 0;
+       bottom: 0;
+       left: 0;
+       width: 80%;
+       height: 100vh;
+       background-color: #fff;
+       z-index: 100;
+       overflow: auto;
+       transform: translateX(-100%);
+       visibility: hidden;
+       transition: all var(--t-duration-default);
+       opacity: 0;
+        &.active {
+          transform: translateX(0);
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+      .header-close {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+      }
+
+      .icon-close {
+        padding: 6px;
+        svg {
+          width: 18px;
+        }
+      }
+    }
   }
 
   .t-menu {
@@ -13,7 +57,10 @@
       display: flex;
       align-items: center;
       font-family: 'T-Font-Heading', sans-serif;
-      font-weight: 600;
+      font-weight: 500;
+      @include breakpoint-max(lg) {
+        padding: 12px;
+      }
     }
 
     &__title {
@@ -27,13 +74,16 @@
     }
 
     &__has-sub {
-      &:hover {
-        .t-menu__sub-menu {
-          pointer-events: auto;
-          opacity: 1;
-          visibility: visible;
+      @include breakpoint-min(lg) {
+        &:hover {
+          .t-menu__sub-menu {
+            pointer-events: auto;
+            opacity: 1;
+            visibility: visible;
+          }
         }
       }
+      
     }
 
     &__sub-menu-item {
@@ -50,16 +100,22 @@
 
     &__sub-child,
     &__sub-menu {
-      width: var(--submenu-column-width, 250px);
-      padding: 1rem;
-      box-shadow: 0 5px 15px #00000012;
-      transition: all var(--t-duration-default, 0.25s);
-
-      li {
-        &:hover {
-          background-color: #dedede;
+      @include breakpoint-max(lg) {
+        display: none;
+      }
+      @include breakpoint-min(lg) {
+        width: var(--submenu-column-width, 250px);
+        padding: 1rem;
+        box-shadow: 0 5px 15px #00000012;
+        transition: all var(--t-duration-default, 0.25s);
+  
+        li {
+          &:hover {
+            background-color: #dedede;
+          }
         }
       }
+     
       a {
         padding: 8px 12px;
         transition: all var(--t-duration-default, 0.25s);
@@ -73,25 +129,43 @@
     }
 
     &__sub-menu {
-      position: absolute;
-      transform: translate3d(0, 12px, 0);
-      transform-origin: center;
-      visibility: hidden;
-      opacity: 0;
-      z-index: 100;
-      background-color: rgba(255, 255, 255, 1);
+      @include breakpoint-max(lg) {
+        display: none;
+        margin-left: 12px;
+      }
+
+      @include breakpoint-min(lg) {
+        position: absolute;
+        transform: translate3d(0, 12px, 0);
+        transform-origin: center;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 100;
+        background-color: rgba(255, 255, 255, 1);
+      }
+
+      &--active {
+        display: block;
+      }
+    
     } 
 
     &__sub-child {
-      position: absolute;
-      top: 0;
-      right: 0;
-      transform: translateX(100%);
-      transform-origin: center;
-      visibility: hidden;
-      opacity: 0;
-      z-index: 100;
-      background-color: rgba(255, 255, 255, 1);
+      @include breakpoint-max(lg) {
+        display: none;
+        margin-left: 12px;
+      }
+      @include breakpoint-min(lg) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translateX(100%);
+        transform-origin: center;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 100;
+        background-color: rgba(255, 255, 255, 1);
+      }
     }
     .t-svg-icon--custom {
       width: 22px;
@@ -112,6 +186,13 @@
   &__right {
     a {
       padding: 8px 15px;
+      @include breakpoint-max(md) {
+        padding: 2px 8px;
+      }
     }
+  }
+
+  .t-sub__child--active {
+    display: block;
   }
 }

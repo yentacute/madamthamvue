@@ -27,7 +27,7 @@ $h6-mobile-font-size: #{rem(14)};
 
 @font-face {
   font-family: 'T-Font-Heading';
-  src: url('@/assets/fonts/Nunito/static/Nunito-Medium.ttf') format('ttf');
+  src: url('@/assets/fonts/Inter/static/Inter-Medium.ttf') format('woff');
 }
 
 h1,
@@ -113,7 +113,7 @@ button,
   background-color: rgb(var(--t-btn-primary-bg));
   cursor: pointer;
 
-  &:not(.icon-action) {
+  &:not(.icon-action, .t-subcribe__btn) {
     min-width: 120px;
   }
 
