@@ -15,7 +15,7 @@
           </div>
         </div>
 
-        <div class="t-compare__button" aria-label="Drag" @mousedown="handleCompareStart">
+        <div class="t-compare__button" aria-label="Drag" @mousedown="handleCompareStart" @touchstart="handleCompareStart">
           <span
             ><svg
               xmlns="http://www.w3.org/2000/svg"
@@ -50,17 +50,17 @@ const buttonStyle = computed(() => ({
 
 const handleCompareStart = () => {
   isDragging = true
-  document.addEventListener('mousemove', handleCompareMove)
-  document.addEventListener('mouseup', handleCompareEnd)
-  document.addEventListener('touchmove', handleCompareMove) // Sử dụng touchmove cho di chuyển cảm ứng
-  document.addEventListener('touchend', handleCompareEnd)
+  document.addEventListener('mousemove', handleCompareMove);
+  document.addEventListener('mouseup', handleCompareEnd);
+  document.addEventListener('touchmove', handleCompareMove);
+  document.addEventListener('touchend', handleCompareEnd);
 }
 
 const handleCompareEnd = () => {
   isDragging = false
   document.removeEventListener('mousemove', handleCompareMove)
   document.removeEventListener('mouseup', handleCompareEnd)
-  document.removeEventListener('touchmove', handleCompareMove) // Xóa sự kiện touchmove khi kết thúc
+  document.removeEventListener('touchmove', handleCompareMove)
   document.removeEventListener('touchend', handleCompareEnd)
 }
 
@@ -68,9 +68,8 @@ const handleCompareMove = (event) => {
   if (!isDragging) return
 
   const rect = compareEl.value.getBoundingClientRect()
-  let offsetX
-
-  if (event.type === 'mousemove') {
+  let offsetX;
+  if (event.type === 'mousemove') {        
     offsetX = event.clientX - rect.left
   } else if (event.type === 'touchmove') {
     offsetX = event.touches[0].clientX - rect.left
@@ -79,14 +78,8 @@ const handleCompareMove = (event) => {
   const width = rect.width
   const newPercentage = Math.min(100, Math.max(0, (offsetX / width) * 100))
   percentage.value = newPercentage
-
-  // Cập nhật giao diện dựa trên giá trị percentage.value
-  // Ví dụ: bạn có thể thay đổi độ rộng của một phần tử nào đó dựa trên newPercentage
 }
 
-// Thêm sự kiện khởi động
-document.addEventListener('mousedown', handleCompareStart)
-document.addEventListener('touchstart', handleCompareStart) // Bắt đầu sự kiện kéo trên cảm ứng
 </script>
 
 <style lang="scss" scoped>
